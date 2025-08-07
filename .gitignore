@@ -1,0 +1,17 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# OS-specific
+.DS_Store
+
+# VS Code / editor
+.vscode/
+.idea/
+
+# Backup files
+*~
+data/*.jpg
