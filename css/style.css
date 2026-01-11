@@ -48,6 +48,15 @@ a:hover {
     text-decoration: underline;
 }
 
+.inline-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.inline-link:hover {
+    text-decoration: underline;
+}
+
 /* Sticky Header */
 .site-header {
     position: fixed;
@@ -371,6 +380,9 @@ a:hover {
 .project-title {
     font-size: 1.1rem;
     margin-bottom: 0.25rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .project-title a {
@@ -386,6 +398,22 @@ a:hover {
     color: var(--text-muted);
     margin-bottom: 0.5rem;
     font-style: italic;
+}
+
+.meta-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--text-muted);
+    line-height: 1;
+    text-decoration: none;
+}
+
+.meta-link .btn-icon {
+    display: block;
+}
+
+.meta-link:hover {
+    color: var(--primary-color);
 }
 
 .project-links {
