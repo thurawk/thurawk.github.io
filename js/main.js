@@ -28,19 +28,28 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Remove active class from all links
-                navLinks.forEach(link => link.classList.remove('active'));
+        const visible = entries.filter(entry => entry.isIntersecting);
+        if (!visible.length) {
+            return;
+        }
 
-                // Add active class to corresponding link
-                const id = entry.target.getAttribute('id');
-                const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
-                if (activeLink) {
-                    activeLink.classList.add('active');
-                }
-            }
-        });
+        const candidates = visible.filter(entry => entry.boundingClientRect.top >= 0);
+        let topEntry;
+
+        if (candidates.length) {
+            candidates.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+            topEntry = candidates[0];
+        } else {
+            visible.sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top));
+            topEntry = visible[0];
+        }
+        navLinks.forEach(link => link.classList.remove('active'));
+
+        const id = topEntry.target.getAttribute('id');
+        const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+        if (activeLink) {
+            activeLink.classList.add('active');
+        }
     }, observerOptions);
 
     sections.forEach(section => {
