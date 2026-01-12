@@ -15,6 +15,7 @@
 \usepackage{array} % tabularx requires this
 \usepackage[dvipsnames]{xcolor} % for coloring text
 \definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\definecolor{linkBlue}{RGB}{0, 119, 204} % link blue
 \usepackage{enumitem} % for customizing lists
 \usepackage{fontawesome5} % for using icons
 \usepackage{amsmath} % for math
@@ -193,12 +194,13 @@
         \begin{twocolentry}{
             Sept 2022 – Present
         }
-            \textbf{Chungnam National University}, BE in Electrical Engineering\end{twocolentry}
+            \textbf{\href{https://www.cnu.ac.kr}{\textcolor{linkBlue}{Chungnam National University}}}, B.E. in Electrical Engineering\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{Coursework:} Computer Programming, Computer Scientific Thinking, Linear Algebra, AI and Future Society, Modern Control Theory and Design, Sensor and Measurement Engineering
+                \item \textbf{Coursework:} Computer Programming (C), Computer Scientific Thinking, Linear Algebra, AI and Future Society, Modern Control Theory and Design, Sensor and Measurement Engineering
+                \item \textbf{Certifications:} HarvardX: CS50's Introduction to Programming with Python, CS50: Introduction to Computer Science, CS50's Introduction to Artificial Intelligence with Python
 
             \end{highlights}
         \end{onecolentry}
@@ -208,7 +210,7 @@
         \begin{twocolentry}{
             Dec 2024 – Present
         }
-            \textbf{ AI, Software, Prompt Engineer}, AIdenBio -- Daejeon, KR\end{twocolentry}
+            \textbf{ AI, Software, Prompt Engineer}, \href{http://aidanbio.com/}{\textcolor{linkBlue}{AIdenBio}} -- Daejeon, KR\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
@@ -219,22 +221,33 @@
                 \item Contributed to building intelligent, production-grade systems for life sciences and biomedical applications
             \end{highlights}
         \end{onecolentry}
-    
+        \vspace{0.20 cm}
+        \begin{twocolentry}{
+            Oct 2025 – Nov 2025
+        }
+            \textbf{AI Software Engineer Intern}, \href{https://www.grinda.ai/en}{\textcolor{linkBlue}{GRINDA AI}} -- Daejeon, KR\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built an AI-powered Slack bot that converts issue reports into structured GitHub issues using Claude AI and FastAPI, with auto-labeling, translation, and monitoring
+            \end{highlights}
+        \end{onecolentry}
+
+
     \section{Projects}
 
 
         \begin{twocolentry}{
         }
-            \textbf{ChatPDB – Protein Structure Visualization Assistant(LLM + RAG + PyMOL)}\end{twocolentry}
+            \textbf{ChatPDB – Protein Structure Visualization Assistant (LLM + RAG + PyMOL)}\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-            \item Developed an intelligent assistant to interpret and visualize protein structures using natural language queries.
-            \item Built with FastAPI, integrated PyMOL for 3D rendering, and used LLM + RAG for semantic query understanding.
-            \item Implemented a retriever pipeline (BM25 + FAISS + Cross-Encoder) with a domain-specific vector store from UniProt annotations.
-            \item Enabled session-based workflows and automated tools (e.g., ligand binding sites, domains, and hydrophobicity).
-            \item Integrated a CLI using Ollama and Qwen/Deepseek LLMs.
+            \item Built an assistant that interprets natural language queries to visualize protein structures with LLM + RAG and PyMOL rendering.
+            \item Implemented a retriever pipeline (BM25 + FAISS + Cross-Encoder) using UniProt annotations and enabled session-based workflows.
+            \item Integrated FastAPI services and a CLI using local LLMs (Ollama) for interactive usage.
             \end{highlights}
         \end{onecolentry}
 
@@ -242,27 +255,27 @@
 
         \begin{twocolentry}{
         }
-            \textbf{Iris Flower Classification with Support Vector Machine (SVM)}\end{twocolentry}
+            \textbf{Iris Flower Classification (SVM)} \href{https://github.com/thurawk/iris-classification}{\faGithub}\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item This project involved building a machine learning model to classify iris flowers using a Support Vector Machine (SVM). I used Scikit-learn for model building and evaluation, and visualized model performance with confusion matrices and decision boundaries.
+                \item Built an SVM classifier with StandardScaler preprocessing, GridSearchCV tuning, and evaluation via accuracy, confusion matrix, and classification report.
+                \item Visualized decision boundaries with PCA and saved the best model pipeline for reuse.
             \end{highlights}
         \end{onecolentry}
-
 
         \vspace{0.2 cm}
 
         \begin{twocolentry}{
         }
-            \textbf{Customer Segmentation with K-means Clustering
-}\end{twocolentry}
+            \textbf{Customer Segmentation (K-means)} \href{https://github.com/thurawk/customer-segmentation}{\faGithub}\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item I applied K-means clustering on synthetic customer data to segment customers by age, income, and spending score. The key steps involved data scaling, identifying optimal clusters with the Elbow Method, and evaluating performance with silhouette scores.
+                \item Applied K-means clustering on synthetic customer data (age, income, spending) to identify actionable segments.
+                \item Used StandardScaler preprocessing, elbow and silhouette analysis for k selection, and cluster visualizations; saved the trained model and scaler.
             \end{highlights}
         \end{onecolentry}
         
@@ -270,48 +283,53 @@
 
         \begin{twocolentry}{
         }
-            \textbf{Tic-Tac-Toe Game with Python}\end{twocolentry}
+            \textbf{Text Classification} \href{https://github.com/thurawk/text-classification}{\faGithub}\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Designed a 3x3 grid with dynamic state updates of the game, implemented win, tie, and input validation mechanisms, and ensured seamless player interaction with alternating turns.
+                \item Built a supervised text classifier with TF-IDF features and multiple models (Naive Bayes, Logistic Regression, SVM) with GridSearchCV tuning.
+                \item Evaluated with accuracy and precision/recall/F1, visualized results, and saved the model, vectorizer, and label encoder for deployment.
+            \end{highlights}
+        \end{onecolentry}
+
+    \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        }
+            \textbf{Quote Sentiment Analysis} \href{https://github.com/thurawk/quote-sentiment-analysis}{\faGithub}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built a sentiment analysis pipeline for short quotes by scraping data with requests and BeautifulSoup, labeling with VADER, and training Naive Bayes and Logistic Regression models.
+                \item Evaluated with confusion matrices and visualizations like sentiment distributions and word clouds.
             \end{highlights}
         \end{onecolentry}
 
     \vspace{0.6 cm}
 
        \vspace{0.15 cm}
-       \section{Skills}   
+       \section{Skills}
         \begin{onecolentry}
         \textbf{Programming Languages:} Python, C, MATLAB.
         \end{onecolentry}
 
         \vspace{0.2 cm}
-        
-        \textbf{Libraries \& Frameworks:}
+
+        \textbf{AI/ML:}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Data \& ML: Pandas, NumPy, Scikit-learn, TensorFlow, Seaborn, Matplotlib
-                \item LLM \& RAG: LangChain, LangGraph, FAISS, Hugging Face Transformers, SentenceTransformers
-                \item Web \& Backend: FastAPI, Flask, MCP(Model Context Protocol)
-            \end{highlights}
-            \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \textbf{AI/ML Techniques:}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Supervised \& Unsupervised Learning
-                \item Regression, Classification, Clustering
-                \item Reinforcement Learning
                 \item Retrieval-Augmented Generation (RAG)
+                \item LangChain
+                \item Prompt Engineering
+                \item Vector Databases
+                \item LLM-Powered Chatbots
+                \item Local LLM Deployment (Ollama)
             \end{highlights}
         \end{onecolentry}
-        
+
         \vspace{0.2 cm}
 
         \textbf{Tools \& Platforms:}
@@ -322,18 +340,19 @@
                 \item Version Control: Git, GitHub
                 \item Productivity: Notion, Google Workspace, Microsoft Office
                 \item Model Hosting \& Inference: Ollama, Hugging Face, Transformers Inference API
-                \end{highlights}
+            \end{highlights}
         \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{onecolentry}
-        \textbf{Operating Systems:} Windows, Mac, Linux \end{onecolentry}
+        \textbf{Operating Systems:} Windows, Linux, Mac.
+        \end{onecolentry}
 
         \vspace{0.2 cm}
 
         \begin{onecolentry}
-        \textbf{Languages:} Burmese (native), English (fluent), Korean (TOPIK level 5).
+        \textbf{Languages:} Burmese (Native), English (Fluent), Korean (TOPIK 5).
         \end{onecolentry}
 \section*{References}
 Available upon request.
