@@ -20,6 +20,47 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Active Link Highlighting on Scroll
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.nav-link');
+    const header = document.querySelector('.site-header');
+
+    const getHeaderHeight = () => (header ? header.offsetHeight : 0);
+
+
+    // Smooth scroll to section top (with header offset)
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+            const section = document.querySelector(href);
+            if (!section) return;
+            event.preventDefault();
+            const rect = section.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const headerHeight = getHeaderHeight();
+            const target = scrollTop + rect.top - headerHeight - 6;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            window.scrollTo({ top: Math.max(0, Math.min(target, maxScroll)), behavior: 'smooth' });
+        });
+    });
+
+
+    // Simple scroll to section top (accounting for header)
+    navLinks.forEach((link) => {
+        link.addEventListener('click', (event) => {
+            const href = link.getAttribute('href');
+            if (!href || !href.startsWith('#')) return;
+
+            const section = document.querySelector(href);
+            if (!section) return;
+
+            event.preventDefault();
+            const rect = section.getBoundingClientRect();
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const headerHeight = getHeaderHeight();
+            const target = scrollTop + rect.top - headerHeight - 6;
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            window.scrollTo({ top: Math.max(0, Math.min(target, maxScroll)), behavior: 'auto' });
+        });
+    });
 
     const observerOptions = {
         root: null,
