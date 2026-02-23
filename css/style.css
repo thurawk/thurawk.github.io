@@ -32,7 +32,7 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: none;
-    scroll-padding-top: var(--nav-height);
+    scroll-padding-top: calc(var(--nav-height) - 1.5rem);
 }
 
 body {
@@ -164,8 +164,7 @@ a:hover {
 /* Sections */
 .content-section {
     margin-bottom: 2.2rem;
-    scroll-margin-top: var(--nav-height);
-    scroll-snap-align: unset;
+    scroll-margin-top: calc(var(--nav-height) - 1.5rem);
     background-color: var(--section-bg);
     border: 1px solid var(--border-color);
     border-radius: 12px;
@@ -189,7 +188,6 @@ a:hover {
     margin-bottom: 0;
     padding-top: 0.9rem;
     padding-bottom: 0.9rem;
-    scroll-margin-top: calc(var(--nav-height) + 0.5rem);
 }
 
 #skills.content-section {
@@ -197,7 +195,6 @@ a:hover {
     padding: 2rem;
     padding-top: 0.9rem;
     padding-bottom: 0.9rem;
-    scroll-margin-top: calc(var(--nav-height) + 0.5rem);
 }
 
 .section-divider {
