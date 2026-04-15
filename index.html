@@ -20,7 +20,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -71,6 +71,7 @@
       <div class="header-right">
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
           <a href="#featured" class="nav-link">Projects</a>
           <a href="#skills" class="nav-link">Skills</a>
           <a href="#experience" class="nav-link">Experience</a>
@@ -88,35 +89,18 @@
   <section id="hero" class="hero">
     <div class="hero-inner">
       <div class="hero-text">
-        <div class="eyebrow reveal" style="--reveal-delay:0ms">
+        <h1 class="hero-name reveal" style="--reveal-delay:0ms">Thura Win Kyaw</h1>
+        <h2 class="hero-role reveal" style="--reveal-delay:80ms">
           <span class="status-dot" aria-hidden="true"></span>
-          AI/ML/Electrical Engineer &middot; Daejeon, South Korea
-        </div>
-        <h1 class="hero-title reveal" style="--reveal-delay:80ms">
-          Building AI systems<br>that reason over<br>knowledge.
-        </h1>
-        <p class="hero-bio reveal" style="--reveal-delay:180ms">
-          I design and build RAG pipelines, LLM applications, and conversational AI
-          systems &mdash; currently developing intelligent biomedical knowledge retrieval
-          at <a href="http://aidanbio.com/" target="_blank" rel="noopener noreferrer">AIdenBio</a>
-          while studying Electrical Engineering at
-          <a href="https://www.cnu.ac.kr" target="_blank" rel="noopener noreferrer">Chungnam National University</a>.
+          AI/ML/Electrical Engineer
+        </h2>
+        <p class="hero-title reveal" style="--reveal-delay:160ms">
+          Building AI systems that reason over knowledge.
         </p>
-        <div class="hero-research reveal" style="--reveal-delay:250ms">
-          <p class="hero-research-label">Research interests</p>
-          <div class="research-grid">
-            <span class="research-tag">Retrieval-Augmented Generation</span>
-            <span class="research-tag">Biomedical NLP</span>
-            <span class="research-tag">LLM Evaluation</span>
-            <span class="research-tag">Conversational AI Systems</span>
-            <span class="research-tag">Local LLM Deployment</span>
-            <span class="research-tag">Prompt Engineering</span>
-          </div>
-        </div>
-        <p class="hero-stack reveal" style="--reveal-delay:330ms" aria-label="Core technologies">
-          python &middot; langchain &middot; fastapi &middot; vector-db &middot; ollama
+        <p class="hero-stack reveal" style="--reveal-delay:180ms" aria-label="Core technologies">
+          python &middot; rag &middot; langchain &middot; nlp &middot; RL &middot; vector-db &middot; ollama
         </p>
-        <div class="hero-ctas reveal" style="--reveal-delay:410ms">
+        <div class="hero-ctas reveal" style="--reveal-delay:280ms">
           <a href="#work" class="btn-primary">View Projects</a>
           <a href="data/Thura_s_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost">Download CV ↓</a>
           <a href="https://github.com/thurawk" target="_blank" rel="noopener noreferrer" class="btn-icon-link" aria-label="GitHub profile">
@@ -134,6 +118,75 @@
       <div class="hero-image reveal" style="--reveal-delay:120ms">
         <img src="data/profile_pic.jpg" alt="Thura Win Kyaw" class="profile-image" fetchpriority="high">
       </div>
+    </div>
+  </section>
+
+  <!-- ── About ───────────────────────────────────────────────── -->
+  <section id="about" class="section-about" aria-labelledby="about-label">
+    <div class="section-inner">
+      <div class="section-label reveal" id="about-label">About</div>
+
+      <div class="about-grid reveal">
+        <div class="about-bio">
+          <p>
+            I'm Thura Win Kyaw, an AI/ML Engineer based in Daejeon, South Korea. I design and build
+            RAG pipelines, LLM applications, and conversational AI systems &mdash; currently developing
+            intelligent biomedical knowledge retrieval at
+            <a href="http://aidanbio.com/" target="_blank" rel="noopener noreferrer">AIdenBio</a>.
+            My work sits at the intersection of large language models, retrieval systems, and real-world
+            software, turning research ideas into production-grade AI applications.
+          </p>
+          <p>
+            I specialize in Retrieval-Augmented Generation (RAG), LangChain-based pipelines, and
+            LLM-powered conversational systems. I enjoy designing end-to-end AI workflows — from
+            vector search and prompt engineering to FastAPI backends and local model deployment with Ollama.
+          </p>
+          <p>
+            Alongside my engineering work, I'm completing a Bachelor's degree in Electrical Engineering
+            at <a href="https://www.cnu.ac.kr" target="_blank" rel="noopener noreferrer">Chungnam National University</a>,
+            where I explore the overlap between control systems, signal processing, and intelligent
+            automation. I hold HarvardX certifications in Computer Science, Python, and AI.
+          </p>
+        </div>
+
+        <div class="about-facts">
+          <div class="about-fact">
+            <span class="fact-label">Based in</span>
+            <span class="fact-value">Daejeon, South Korea</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-label">Currently</span>
+            <span class="fact-value">AI Engineer at AIdenBio</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-label">Studying</span>
+            <span class="fact-value">B.E. Electrical Engineering, CNU</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-label">Focus</span>
+            <span class="fact-value">RAG · LLMs · Biomedical AI</span>
+          </div>
+          <div class="about-fact">
+            <span class="fact-label">Open to</span>
+            <span class="fact-value">Research roles &amp; internships</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-research reveal">
+        <p class="hero-research-label">Research Interests</p>
+        <div class="research-grid">
+          <span class="research-tag">Retrieval-Augmented Generation</span>
+          <span class="research-tag">NLP, Biomedical NLP</span>
+          <span class="research-tag">Reinforcement Learning (RL)</span>
+          <span class="skill-chip">In-context learning (ICL)</span>
+          <span class="research-tag">Prompt Engineering</span>
+          <span class="research-tag">LLM Evaluation</span>
+          <span class="research-tag">Conversational AI Systems</span>
+          <span class="research-tag">Local LLM Deployment</span>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -288,22 +341,85 @@
   <section id="skills" class="section-research" aria-labelledby="skills-label">
     <div class="section-inner">
       <div class="section-label reveal" id="skills-label">Skills</div>
-      <div class="skills-block reveal">
-        <div class="skill-row">
-          <span class="skill-cat">AI / ML</span>
-          <span class="skill-vals">RAG &middot; LangChain &middot; Prompt Engineering &middot; Vector Databases &middot; LLM Chatbots &middot; Ollama</span>
+
+      <div class="skills-grid">
+
+        <!-- AI / ML — featured full-width card -->
+        <div class="skill-card skill-card--featured reveal" style="--reveal-delay:0ms">
+          <div class="skill-card-header">
+            <span class="skill-card-title">AI / ML</span>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip">Retrieval-Augmented Generation (RAG)</span>
+            <span class="skill-chip">AgenticRAG</span>
+            <span class="skill-chip">LangChain</span>
+            <span class="skill-chip">Natural Language Processing (NLP)</span>
+            <span class="skill-chip">In-context learning (ICL)</span>
+            <span class="skill-chip">Reinforcement Learning (RL)</span>
+            <span class="skill-chip">Vector Databases</span>
+            <span class="skill-chip">LLM-Powered Chatbots</span>
+            <span class="skill-chip">Local LLM Deployment (Ollama)</span>
+          </div>
         </div>
-        <div class="skill-row">
-          <span class="skill-cat">Languages</span>
-          <span class="skill-vals">Python &middot; C &middot; MATLAB</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-cat">Tools</span>
-          <span class="skill-vals">FastAPI &middot; Docker &middot; Git &middot; GitHub &middot; VS Code &middot; Cursor</span>
-        </div>
-        <div class="skill-row">
-          <span class="skill-cat">Human Languages</span>
-          <span class="skill-vals">Burmese (Native) &middot; English (Fluent) &middot; Korean (TOPIK 5)</span>
+
+        <!-- Secondary 4-card grid -->
+        <div class="skills-secondary">
+
+          <div class="skill-card reveal" style="--reveal-delay:60ms">
+            <div class="skill-card-header">
+              <span class="skill-card-title">Programming Languages</span>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Python</span>
+              <span class="skill-chip">C</span>
+              <span class="skill-chip">MATLAB</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--reveal-delay:120ms">
+            <div class="skill-card-header">
+              <span class="skill-card-title">Tools &amp; Platforms</span>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">VS Code</span>
+              <span class="skill-chip">Cursor</span>
+              <span class="skill-chip">Claude Code</span>
+              <span class="skill-chip">Ollama</span>
+              <span class="skill-chip">Codex</span>
+              <span class="skill-chip">OpenClaw</span>
+              <span class="skill-chip">Jupyter Notebook</span>
+              <span class="skill-chip">Git</span>
+              <span class="skill-chip">GitHub</span>
+              <span class="skill-chip">Hugging Face</span>
+              <span class="skill-chip">Notion</span>
+              <span class="skill-chip">MS Office</span>
+              <span class="skill-chip">Google Workspace</span>
+              <span class="skill-chip">Docker</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--reveal-delay:180ms">
+            <div class="skill-card-header">
+              <span class="skill-card-title">Operating Systems</span>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Windows</span>
+              <span class="skill-chip">Linux</span>
+              <span class="skill-chip">macOS</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal" style="--reveal-delay:240ms">
+            <div class="skill-card-header">
+              <span class="skill-card-title">Human Languages</span>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip">Burmese <span class="chip-level">Native</span></span>
+              <span class="skill-chip">English <span class="chip-level">Fluent</span></span>
+              <span class="skill-chip">Korean <span class="chip-level">TOPIK 5</span></span>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -387,7 +503,7 @@
     <div class="footer-inner">
       <nav class="footer-icons" aria-label="Contact links">
         <a href="mailto:thurawk@gmail.com" class="btn-icon-link footer-icon-btn" aria-label="Email">
-          <span aria-hidden="true">✉️</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </a>
         <a href="https://github.com/thurawk" target="_blank" rel="noopener noreferrer" class="btn-icon-link footer-icon-btn" aria-label="GitHub">
           <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" width="20" height="20" class="icon-gh">

@@ -194,23 +194,24 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 34px;
-  height: 34px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  width: auto;
+  height: auto;
+  border: none;
+  border-radius: 0;
   background: none;
   color: var(--text-2);
   cursor: pointer;
-  transition: color 0.15s, border-color 0.15s, background-color 0.15s;
+  padding: 0.25rem;
+  transition: color 0.15s, opacity 0.15s;
   flex-shrink: 0;
 }
 
 .theme-toggle:hover {
   color: var(--text);
-  background-color: var(--subtle);
+  opacity: 0.75;
 }
 
-.theme-toggle svg { width: 15px; height: 15px; }
+.theme-toggle svg { width: 18px; height: 18px; }
 
 .icon-sun  { display: none; }
 [data-theme="dark"] .icon-sun  { display: block; }
@@ -312,6 +313,28 @@ img { max-width: 100%; display: block; }
   gap: 1.25rem;
 }
 
+/* Name — primary identity, acts as visual H1 */
+.hero-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Role — H2 subtitle directly under name */
+.hero-role {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  font-weight: 500;
+  color: var(--text-2);
+  letter-spacing: 0.01em;
+}
+
 /* Eyebrow pill */
 .eyebrow {
   display: inline-flex;
@@ -343,14 +366,14 @@ img { max-width: 100%; display: block; }
 }
 
 /* Headline */
+/* Title — plain tagline, reads as normal text */
 .hero-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3.5vw, 2.35rem);
-  font-weight: 800;
-  line-height: 1.07;
-  letter-spacing: -0.03em;
-  color: var(--text);
-  max-width: 620px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--text-2);
+  max-width: 480px;
 }
 
 /* Bio */
@@ -503,6 +526,7 @@ img { max-width: 100%; display: block; }
   filter: invert(65%) sepia(30%) saturate(400%) hue-rotate(175deg);
 }
 
+
 /* Profile image */
 .hero-image {
   display: flex;
@@ -620,10 +644,10 @@ img { max-width: 100%; display: block; }
 }
 
 .featured-title {
-  font-family: var(--font-display);
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 2.1rem;
-  font-weight: 800;
-  letter-spacing: -0.025em;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--text);
   line-height: 1.1;
   margin-bottom: 0.2rem;
@@ -978,6 +1002,85 @@ img { max-width: 100%; display: block; }
   line-height: 1.75;
 }
 
+/* About */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.about-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.about-bio p {
+  font-size: 0.975rem;
+  color: var(--text-2);
+  line-height: 1.85;
+}
+
+.about-bio a {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.about-bio a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  opacity: 1;
+}
+
+.about-research {
+  margin-top: 2.5rem;
+}
+
+.about-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.about-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s;
+}
+
+.about-fact:last-child { border-bottom: none; }
+
+.about-fact:hover { background-color: var(--subtle); }
+
+.fact-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.fact-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 /* Education */
 .education-block {
   display: flex;
@@ -1056,32 +1159,104 @@ img { max-width: 100%; display: block; }
 }
 
 /* Skills */
-.skills-block {
+.skills-grid {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 1rem;
 }
 
-.skill-row {
-  display: flex;
-  gap: 1.25rem;
-  align-items: baseline;
-  flex-wrap: wrap;
+/* Featured AI/ML card — full width */
+.skill-card--featured {
+  border-left: 3px solid var(--accent);
+  background-color: var(--surface);
 }
 
-.skill-cat {
+[data-theme="dark"] .skill-card--featured {
+  background-color: rgba(var(--accent-rgb), 0.03);
+}
+
+.skill-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.5rem;
+  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.skill-card:hover {
+  border-color: rgba(var(--accent-rgb), 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+}
+
+[data-theme="dark"] .skill-card:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.skill-card-header {
+  margin-bottom: 0.85rem;
+}
+
+.skill-card-title {
   font-family: var(--font-mono);
-  font-size: 0.73rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--text-3);
-  min-width: 120px;
-  flex-shrink: 0;
-  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.skill-vals {
-  font-size: 0.875rem;
+.skill-card-title::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-alt));
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* Chips */
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skill-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
   color: var(--text-2);
-  line-height: 1.6;
+  background-color: var(--subtle);
+  border: 1px solid var(--border);
+  padding: 0.28rem 0.7rem;
+  border-radius: 6px;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.skill-chip:hover {
+  border-color: rgba(var(--accent-rgb), 0.4);
+  color: var(--accent);
+}
+
+.chip-level {
+  font-size: 0.65rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  opacity: 0.85;
+}
+
+/* Secondary 4-card grid */
+.skills-secondary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1rem;
 }
 
 /* ============================================================
@@ -1180,6 +1355,41 @@ img { max-width: 100%; display: block; }
 }
 
 /* ============================================================
+   RESPONSIVE — 1024px (iPad / small laptop)
+   ============================================================ */
+
+@media (max-width: 1024px) {
+  /* Hero — tighten photo column */
+  .hero-inner {
+    grid-template-columns: 1fr 270px;
+    gap: 2.5rem;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .profile-image {
+    width: 260px;
+    height: 320px;
+  }
+
+  /* About — narrow the facts sidebar */
+  .about-grid {
+    grid-template-columns: 1fr 220px;
+    gap: 2.5rem;
+  }
+
+  /* Featured — tighten arch diagram column */
+  .featured-card {
+    grid-template-columns: 1fr 200px;
+    gap: 2rem;
+  }
+
+  /* Skills secondary — 2 columns on iPad */
+  .skills-secondary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================================
    RESPONSIVE — 768px
    ============================================================ */
 
@@ -1202,41 +1412,91 @@ img { max-width: 100%; display: block; }
   }
 
   .site-nav.open { display: flex; }
+  .nav-toggle    { display: flex; }
 
-  .nav-toggle { display: flex; }
-
-  /* On mobile, theme toggle sits beside the logo — keep it visible */
+  /* On mobile, theme toggle sits beside the logo */
   .header-left { gap: 0.4rem; }
 
-  /* Hero */
+  /* ── Hero ── */
   .hero-inner {
     grid-template-columns: 1fr;
-    padding: 2.5rem 1.25rem 3.5rem;
-    gap: 2rem;
+    padding: 1.75rem 1.25rem 3rem;
+    gap: 1.5rem;
   }
 
-  .hero-image { order: -1; justify-content: flex-start; }
+  /* Center the photo and make it smaller */
+  .hero-image {
+    order: -1;
+    justify-content: center;
+  }
 
-  .profile-image { width: 160px; height: 200px; }
+  .profile-image {
+    width: 130px;
+    height: 160px;
+  }
 
-  .hero-title { font-size: clamp(2rem, 9vw, 2.8rem); }
+  .hero-name  { font-size: clamp(1.6rem, 8vw, 2rem); }
+  .hero-role  { font-size: 0.9rem; }
+  .hero-title { font-size: 0.9rem; }
 
-  /* Featured */
+  .hero-bio { font-size: 0.95rem; }
+
+  /* Research tags — smaller on mobile */
+  .research-tag {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.65rem;
+  }
+
+  /* CTA buttons — wrap cleanly */
+  .hero-ctas {
+    gap: 0.5rem;
+  }
+
+  /* ── Featured ── */
   .featured-card {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
 
-  .featured-title { font-size: 1.65rem; }
+  .featured-title { font-size: 1.5rem; }
 
-  /* Projects */
+  /* ── Projects ── */
   .projects-grid { grid-template-columns: 1fr; }
 
-  /* Footer */
+  /* ── Experience timeline ── */
+  .timeline { padding-left: 1rem; }
+
+  .timeline-item { padding-left: 1.25rem; }
+
+  /* ── Education — stack degree and dates ── */
+  .edu-row {
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .edu-dates { text-align: left; }
+
+  /* ── Skills — single column on mobile ── */
+  .skills-secondary { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
-  .section-inner { padding: 3rem 1.25rem; }
-  .featured-card { padding: 1.5rem; }
-  .hero-ctas { gap: 0.5rem; }
+  body { font-size: 16px; }
+
+  .section-inner { padding: 2.5rem 1.1rem; }
+
+  .hero-inner { padding: 1.5rem 1.1rem 2.5rem; }
+
+  .hero-name  { font-size: clamp(1.4rem, 8vw, 1.8rem); }
+  .hero-role  { font-size: 0.85rem; }
+  .hero-title { font-size: 0.875rem; }
+
+  .featured-card { padding: 1.25rem; }
+
+  /* Footer icons — bigger tap targets */
+  .footer-icon-btn {
+    width: 46px;
+    height: 46px;
+  }
 }
