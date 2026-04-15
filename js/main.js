@@ -54,12 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
   if (navLinks.length) {
-    // Only watch sections that have a corresponding nav link — avoids "dead zones"
-    // where scrolling through unlinked sections (featured, research, experience)
-    // would clear the active state entirely.
-    const linkedIds = new Set([...navLinks].map((l) => l.getAttribute('href').slice(1)));
-    const linkedSections = [...document.querySelectorAll('section[id]')]
-      .filter((s) => linkedIds.has(s.id));
+    // Resolve each nav link's target element by ID directly — works for both
+    // <section id="..."> and plain elements like <div id="skills">.
+    const linkedIds = [...navLinks].map((l) => l.getAttribute('href').slice(1));
+    const linkedSections = linkedIds
+      .map((id) => document.getElementById(id))
+      .filter(Boolean);
 
     const navObserver = new IntersectionObserver((entries) => {
       const visible = entries.filter((e) => e.isIntersecting);
