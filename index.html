@@ -4,318 +4,401 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description"
-    content="Thura Win Kyaw - AI/ML Engineer specializing in RAG, LangChain, and Conversational AI.">
-  <meta property="og:title" content="Thura Win Kyaw – AI/ML Engineer">
-  <meta property="og:description"
-    content="Portfolio of Thura Win Kyaw, an AI Engineer passionate about Generative AI and Machine Learning.">
-  <meta property="og:image" content="data/thura_profile.jpg">
+  <meta name="description" content="AI/ML/Electrical Engineer specializing in RAG pipelines, LangChain, and LLM-powered systems. Building intelligent biomedical AI at AIdenBio.">
+  <meta property="og:title" content="Thura Win Kyaw — AI/ML/Electrical Engineer">
+  <meta property="og:description" content="RAG · LangChain · Biomedical AI · LLM Systems">
+  <meta property="og:image" content="https://thurawk.github.io/data/thura_profile.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:type" content="website">
-  <title>Thura Win Kyaw</title>
+  <meta property="og:url" content="https://thurawk.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://thurawk.github.io/">
+  <title>Thura Win Kyaw — AI/ML/Electrical  Engineer</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Roboto+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Syne:wght@700;800&display=swap" rel="stylesheet">
 
-  <!-- External CSS -->
+  <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
 
-  <!-- JSON-LD Structured Data -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Thura Win Kyaw",
-      "jobTitle": "AI/ML Engineer",
-      "url": "https://thurawk.github.io",
-      "image": "https://thurawk.github.io/data/thura_profile.jpg",
-      "sameAs": [
-        "https://www.linkedin.com/in/thura-win-kyaw-b111762a3/",
-        "https://github.com/thurawk"
-      ],
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "Chungnam National University"
-      },
-      "knowsAbout": ["Artificial Intelligence", "Machine Learning", "RAG", "LangChain", "Python"]
-    }
-    </script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thura Win Kyaw",
+    "jobTitle": "AI/ML/Electrical Engineer",
+    "url": "https://thurawk.github.io",
+    "image": "https://thurawk.github.io/data/thura_profile.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/thura-win-kyaw-b111762a3/",
+      "https://github.com/thurawk"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Chungnam National University"
+    },
+    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "RAG", "LangChain", "Python", "FastAPI"]
+  }
+  </script>
 </head>
 
 <body>
 
-  <!-- Sticky Header -->
-  <header class="site-header">
+  <!-- ── Header ───────────────────────────────────────────────── -->
+  <header class="site-header" id="site-header">
     <div class="header-inner">
+
       <div class="header-left">
-        <div class="site-title">
-          <a href="#">Thura Win Kyaw</a>
-        </div>
-        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Dark Mode">
-          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        <a href="#" class="site-logo">twk.</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
           </svg>
-          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
           </svg>
         </button>
       </div>
-      <nav class="site-nav">
-        <a href="#about" class="nav-link active">Home</a>
-        <a href="#skills" class="nav-link">Skills</a>
-        <a href="#projects" class="nav-link">Projects</a>
-      </nav>
+
+      <div class="header-right">
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#hero" class="nav-link">About</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#featured" class="nav-link">Projects</a>
+          <a href="data/Thura_s_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-cv">CV ↗</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
     </div>
   </header>
 
-  <div class="container">
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
+  <section id="hero" class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <div class="eyebrow reveal" style="--reveal-delay:0ms">
+          <span class="status-dot" aria-hidden="true"></span>
+          AI/ML/Electrical Engineer &middot; Daejeon, South Korea
+        </div>
+        <h1 class="hero-title reveal" style="--reveal-delay:80ms">
+          Building AI systems<br>that reason over<br>knowledge.
+        </h1>
+        <p class="hero-bio reveal" style="--reveal-delay:180ms">
+          I design and build RAG pipelines, LLM applications, and conversational AI
+          systems &mdash; currently developing intelligent biomedical knowledge retrieval
+          at <a href="http://aidanbio.com/" target="_blank" rel="noopener noreferrer">AIdenBio</a>
+          while studying Electrical Engineering at
+          <a href="https://www.cnu.ac.kr" target="_blank" rel="noopener noreferrer">Chungnam National University</a>.
+        </p>
+        <div class="hero-research reveal" style="--reveal-delay:250ms">
+          <p class="hero-research-label">Research interests</p>
+          <div class="research-grid">
+            <span class="research-tag">Retrieval-Augmented Generation</span>
+            <span class="research-tag">Biomedical NLP</span>
+            <span class="research-tag">LLM Evaluation</span>
+            <span class="research-tag">Conversational AI Systems</span>
+            <span class="research-tag">Local LLM Deployment</span>
+            <span class="research-tag">Prompt Engineering</span>
+          </div>
+        </div>
+        <p class="hero-stack reveal" style="--reveal-delay:330ms" aria-label="Core technologies">
+          python &middot; langchain &middot; fastapi &middot; vector-db &middot; ollama
+        </p>
+        <div class="hero-ctas reveal" style="--reveal-delay:410ms">
+          <a href="#work" class="btn-primary">View Projects</a>
+          <a href="data/Thura_s_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-ghost">Download CV ↓</a>
+          <a href="https://github.com/thurawk" target="_blank" rel="noopener noreferrer" class="btn-icon-link" aria-label="GitHub profile">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" width="20" height="20" class="icon-gh" loading="lazy">
+          </a>
+          <a href="https://www.linkedin.com/in/thura-win-kyaw-b111762a3/" target="_blank" rel="noopener noreferrer" class="btn-icon-link" aria-label="LinkedIn profile">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" width="18" height="18" class="icon-li" loading="lazy">
+          </a>
+          <a href="mailto:thurawk@gmail.com" class="btn-icon-link" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          </a>
+        </div>
+      </div>
 
-    <!-- About Section -->
-    <section id="about" class="content-section">
-      <div class="profile-header">
-        <div class="profile-text">
-          <h1 class="page-title">Thura Win Kyaw</h1>
-          <p class="intro-text">
-            I work at the intersection of Artificial Intelligence and Conversational Systems, focusing on building practical, end-to-end AI applications, alongside my studies toward a Bachelor’s degree in Electrical Engineering at <a href="https://plus.cnu.ac.kr/html/kr/" target="_blank" rel="noopener noreferrer" class="inline-link">Chungnam National University</a>.
-            My recent work centers on RAG, LangChain, Prompt Engineering and LLM-powered chatbots, where I
-            design systems that combine vector databases, structured knowledge, and local LLMs (via Ollama) to produce
-            reliable, grounded responses.
-            I enjoy turning research ideas into working systems — from retrieval pipelines and prompt orchestration to
-            backend services and evaluation workflows — with an emphasis on robustness, clarity, and real-world usability.
+      <div class="hero-image reveal" style="--reveal-delay:120ms">
+        <img src="data/profile_pic.jpg" alt="Thura Win Kyaw" class="profile-image" fetchpriority="high">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Experience + Education + Skills ──────────────────────── -->
+  <section id="experience" class="section-about" aria-labelledby="experience-label">
+    <div class="section-inner">
+
+      <!-- Experience -->
+      <div class="section-label reveal" id="experience-label">Experience</div>
+      <div class="timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="timeline-date">Dec 2024 – Present</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">AI, Software &amp; Prompt Engineer</h3>
+            <p class="timeline-org">
+              <a href="http://aidanbio.com/" target="_blank" rel="noopener noreferrer">AIdenBio</a>
+              &middot; Daejeon, KR
+            </p>
+            <ul class="timeline-bullets">
+              <li>Designed and maintained backend systems for AI model integration, API development, and database management.</li>
+              <li>Engineered and optimized prompts for LLMs to generate personalized, context-aware responses.</li>
+              <li>Developed and deployed RAG pipelines improving output accuracy for biomedical research workflows.</li>
+              <li>Built production-grade intelligent systems for life sciences applications.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-meta">
+            <span class="timeline-date">Oct 2025 – Nov 2025</span>
+          </div>
+          <div class="timeline-body">
+            <h3 class="timeline-role">AI Software Engineer Intern</h3>
+            <p class="timeline-org">
+              <a href="https://www.grinda.ai/en" target="_blank" rel="noopener noreferrer">GRINDA AI</a>
+              &middot; Daejeon, KR
+            </p>
+            <p class="timeline-desc">
+              Built an AI-powered Slack bot that automatically converts issue reports into
+              structured GitHub issues using Claude AI and FastAPI, with auto-labeling,
+              translation, and monitoring.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Education -->
+      <div class="section-label reveal" style="margin-top:3.5rem">Education</div>
+      <div class="education-block reveal">
+        <div class="edu-row">
+          <div class="edu-main">
+            <h3 class="edu-degree">B.E. in Electrical Engineering</h3>
+            <p class="edu-org">
+              <a href="https://www.cnu.ac.kr" target="_blank" rel="noopener noreferrer">Chungnam National University</a>
+              &middot; Daejeon, KR
+            </p>
+          </div>
+          <span class="edu-dates">Sept 2022 – Present</span>
+        </div>
+        <p class="edu-note">
+          Relevant coursework: Computer Programming (C), Linear Algebra, AI and Future Society,
+          Modern Control Theory and Design, Sensor and Measurement Engineering.
+        </p>
+        <div class="certs-label">Certifications</div>
+        <div class="certs-list">
+          <span class="cert-tag">HarvardX: CS50 Python</span>
+          <span class="cert-tag">HarvardX: CS50x</span>
+          <span class="cert-tag">HarvardX: CS50 AI with Python</span>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="section-label reveal" style="margin-top:3.5rem">Skills</div>
+      <div class="skills-block reveal">
+        <div class="skill-row">
+          <span class="skill-cat">AI / ML</span>
+          <span class="skill-vals">RAG &middot; LangChain &middot; Prompt Engineering &middot; Vector Databases &middot; LLM Chatbots &middot; Ollama</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-cat">Languages</span>
+          <span class="skill-vals">Python &middot; C &middot; MATLAB</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-cat">Tools</span>
+          <span class="skill-vals">FastAPI &middot; Docker &middot; Git &middot; GitHub &middot; VS Code &middot; Cursor</span>
+        </div>
+        <div class="skill-row">
+          <span class="skill-cat">Human Languages</span>
+          <span class="skill-vals">Burmese (Native) &middot; English (Fluent) &middot; Korean (TOPIK 5)</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Featured Project ──────────────────────────────────────── -->
+  <section id="featured" class="section-featured" aria-labelledby="featured-label">
+    <div class="section-inner">
+      <div class="section-label reveal" id="featured-label">Featured Project</div>
+
+      <div class="featured-card reveal">
+        <div class="featured-content">
+          <div class="featured-badges">
+            <span class="badge badge--org">Built at AIdenBio</span>
+            <span class="badge badge--live">In Production</span>
+          </div>
+          <h2 class="featured-title">ChatPDB</h2>
+          <p class="featured-subtitle">Protein Structure Visualization Assistant</p>
+          <div class="tech-tags">
+            <span>LLM</span><span>RAG</span><span>PyMOL</span><span>FastAPI</span><span>Vector DB</span><span>Python</span>
+          </div>
+          <p class="featured-desc">
+            An intelligent assistant that interprets natural language queries to visualize
+            3D protein structures from the RCSB PDB. Integrates LLMs with a RAG pipeline
+            for semantic understanding of protein documentation, and PyMOL for interactive
+            rendering &mdash; enabling biomedical researchers to query structural data
+            conversationally without writing visualization scripts.
           </p>
-
-        </div>
-        <div class="profile-image-container">
-          <img src="data/thura_profile.jpg" alt="Thura Win Kyaw" class="profile-image">
-          <div class="social">
-            <a href="data/Thura_s_CV.pdf" target="_blank" rel="noopener noreferrer" class="social-text">CV</a>
-            <a href="https://www.linkedin.com/in/thura-win-kyaw-b111762a3/" target="_blank"
-              rel="noopener noreferrer" title="LinkedIn" class="social-icon-link">
-              <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn"
-                width="24" height="24" class="social-icon linkedin-icon">
-            </a>
-            <a href="https://github.com/thurawk" target="_blank" rel="noopener noreferrer" title="GitHub"
-              class="social-icon-link">
-              <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
-                width="24" height="24" class="social-icon github-icon">
-            </a>
-            <a href="mailto:thurawk@gmail.com" title="Email" aria-label="Email" class="social-text">📬</a>
+          <div class="featured-footer">
+            <span class="badge badge--private">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              Private Repository
+            </span>
           </div>
         </div>
-      </div>
-      <div id="experience" class="home-experience">
-        <h2 class="section-title">Experience</h2>
-        <hr class="section-title-divider">
-        <div class="experience-list">
-          <div class="experience-item">
-            <span class="experience-date">Dec 2024 – Present</span>
-            <div class="experience-content">
-              <strong>AI, Software, Prompt Engineer</strong> at <a href="http://aidanbio.com/" target="_blank"
-                rel="noopener noreferrer">AIdenBio</a>, Daejeon, KR
-              <ul class="experience-bullets">
-                <li>Designed and maintained backend systems focusing on AI model integration, API development, and database management.</li>
-                <li>Engineered and optimized prompts for Large Language Models (LLMs) for personalized, context-aware responses.</li>
-                <li>Developed and deployed Retrieval-Augmented Generation (RAG) pipelines improving output accuracy and relevance.</li>
-                <li>Contributed to building intelligent, production-grade systems for life sciences and biomedical applications.</li>
-              </ul>
+
+        <div class="featured-diagram" aria-label="System architecture diagram for ChatPDB">
+          <p class="diagram-label">System Architecture</p>
+          <div class="arch-flow">
+            <div class="arch-node">
+              <span class="node-name">User Query</span>
+              <span class="node-hint">natural language</span>
             </div>
-          </div>
-
-          <div class="experience-item">
-            <span class="experience-date">Oct 2025 – Nov 2025</span>
-            <div class="experience-content">
-              <strong>AI Software Engineer Intern</strong> at <a href="https://www.grinda.ai/en" target="_blank"
-                rel="noopener noreferrer">GRINDA AI</a>, Daejeon, KR
-              <p>Built an AI-powered Slack bot that automatically converts Slack issue reports into structured GitHub
-                issues using Claude AI and FastAPI, with auto-labeling, translation, and monitoring.</p>
+            <div class="arch-arrow" aria-hidden="true">↓</div>
+            <div class="arch-node arch-node--accent">
+              <span class="node-name">LLM Parsing</span>
+              <span class="node-hint">intent &amp; entity extraction</span>
+            </div>
+            <div class="arch-arrow" aria-hidden="true">↓</div>
+            <div class="arch-node">
+              <span class="node-name">Vector Retrieval</span>
+              <span class="node-hint">protein metadata &amp; docs</span>
+            </div>
+            <div class="arch-arrow" aria-hidden="true">↓</div>
+            <div class="arch-node arch-node--accent">
+              <span class="node-name">PyMOL Generation</span>
+              <span class="node-hint">command synthesis</span>
+            </div>
+            <div class="arch-arrow" aria-hidden="true">↓</div>
+            <div class="arch-node arch-node--alt">
+              <span class="node-name">3D Visualization</span>
+              <span class="node-hint">interactive output</span>
             </div>
           </div>
         </div>
-
-        <div class="education-block">
-          <h3 class="education-heading">Education</h3>
-          <hr class="education-divider">
-          <div class="education-item">
-            <span class="education-degree">B.E. in Electrical Engineering, <a href="https://www.cnu.ac.kr" target="_blank" rel="noopener noreferrer" class="education-school-link">Chungnam National University</a></span>
-            <span class="education-dates">Sept 2022 – Present</span>
-          </div>
-          <ul class="education-list">
-            <li>Relevant coursework: Computer Programming (C), Computer Scientific Thinking, Linear Algebra, AI and Future
-              Society, Modern Control Theory and Design, Sensor and Measurement Engineering</li>
-            <li>Certifications: HarvardX: CS50's Introduction to Programming with Python, CS50: Introduction to Computer
-              Science, CS50's Introduction to Artificial Intelligence with Python</li>
-          </ul>
-        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <hr class="section-divider">
+  <!-- ── Projects ─────────────────────────────────────────────── -->
+  <section id="work" class="section-work" aria-labelledby="work-label">
+    <div class="section-inner">
+      <div class="section-label reveal" id="work-label">Projects</div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="content-section">
-      <h2 class="section-title">Skills</h2>
-      <hr class="section-title-divider">
-      <div class="skills-container">
-        <div class="skill-group">
-          <h3>Programming Languages</h3>
-          <ul class="skill-list">
-            <li>Python</li>
-            <li>C</li>
-            <li>MATLAB</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>AI/ML</h3>
-          <ul class="skill-list">
-            <li>Retrieval-Augmented Generation (RAG)</li>
-            <li>LangChain</li>
-            <li>Prompt Engineering</li>
-            <li>Vector Databases</li>
-            <li>LLM-Powered Chatbots</li>
-            <li>Local LLM Deployment (Ollama)</li>
-          </ul>
-        </div>
+      <div class="projects-grid">
 
-        <div class="skill-group">
-          <h3>Tools & Technologies</h3>
-          <ul class="skill-list">
-            <li>VS Code, Cursor, Git, GitHub, Docker</li>
-            <li>Notion, Google Workspace, MS Office</li>
-          </ul>
-        </div>
+        <article class="project-card reveal" style="--reveal-delay:0ms">
+          <header class="card-header">
+            <h3 class="card-title">
+              Iris Flower Classification
+              <a href="https://github.com/thurawk/iris-classification" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Iris Flower Classification on GitHub">↗</a>
+            </h3>
+            <p class="card-stack">Python &middot; SVM &middot; Scikit-learn &middot; PCA</p>
+          </header>
+          <p class="card-desc">
+            Supervised SVM classifier with StandardScaler preprocessing and GridSearchCV
+            hyperparameter tuning. Evaluated via accuracy, confusion matrix, and F1 score.
+            Decision boundaries visualized with PCA; best model pipeline serialized for reuse.
+          </p>
+          <footer class="card-footer">
+            <a href="https://github.com/thurawk/iris-classification" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
+          </footer>
+        </article>
 
-        <div class="skill-group">
-          <h3>Operating Systems</h3>
-          <ul class="skill-list">
-            <li>Windows</li>
-            <li>Linux</li>
-            <li>Mac</li>
-          </ul>
-        </div>
-        <div class="skill-group">
-          <h3>Languages</h3>
-          <ul class="skill-list">
-            <li>Burmese (Native)</li>
-            <li>English (Fluent)</li>
-            <li>Korean (TOPIK 5)</li>
-          </ul>
-        </div>
+        <article class="project-card reveal" style="--reveal-delay:80ms">
+          <header class="card-header">
+            <h3 class="card-title">
+              Customer Segmentation
+              <a href="https://github.com/thurawk/customer-segmentation" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Customer Segmentation on GitHub">↗</a>
+            </h3>
+            <p class="card-stack">Python &middot; K-means &middot; Scikit-learn</p>
+          </header>
+          <p class="card-desc">
+            Unsupervised K-means clustering on customer demographic data to identify
+            actionable segments. Elbow method and silhouette analysis for optimal k
+            selection. Trained model and scaler serialized for downstream deployment.
+          </p>
+          <footer class="card-footer">
+            <a href="https://github.com/thurawk/customer-segmentation" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
+          </footer>
+        </article>
+
+        <article class="project-card reveal" style="--reveal-delay:160ms">
+          <header class="card-header">
+            <h3 class="card-title">
+              Text Classification
+              <a href="https://github.com/thurawk/text-classification" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Text Classification on GitHub">↗</a>
+            </h3>
+            <p class="card-stack">Python &middot; NLP &middot; TF-IDF &middot; SVM &middot; Logistic Regression</p>
+          </header>
+          <p class="card-desc">
+            Multi-model text classifier with TF-IDF features across Naive Bayes, Logistic
+            Regression, and SVM with GridSearchCV tuning. Evaluated with precision, recall,
+            and F1. Model, vectorizer, and label encoder saved for deployment.
+          </p>
+          <footer class="card-footer">
+            <a href="https://github.com/thurawk/text-classification" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
+          </footer>
+        </article>
+
+        <article class="project-card reveal" style="--reveal-delay:240ms">
+          <header class="card-header">
+            <h3 class="card-title">
+              Quote Sentiment Analysis
+              <a href="https://github.com/thurawk/quote-sentiment-analysis" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Quote Sentiment Analysis on GitHub">↗</a>
+            </h3>
+            <p class="card-stack">Python &middot; NLP &middot; VADER &middot; BeautifulSoup</p>
+          </header>
+          <p class="card-desc">
+            End-to-end sentiment pipeline for short quotes &mdash; scraped with requests and
+            BeautifulSoup, labeled with VADER, trained with Naive Bayes and Logistic
+            Regression. Evaluated with confusion matrices and word cloud visualizations.
+          </p>
+          <footer class="card-footer">
+            <a href="https://github.com/thurawk/quote-sentiment-analysis" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
+          </footer>
+        </article>
+
       </div>
-    </section>
+    </div>
+  </section>
 
-
-    <hr class="section-divider">
-
-    <!-- Projects Section (Publications Style) -->
-    <section id="projects" class="content-section">
-      <h2 class="section-title">Projects</h2>
-      <hr class="section-title-divider">
-
-      <div class="project-list">
-        <div class="project-item">
-          <div class="project-details">
-            <h3 class="project-title">1. ChatPDB - Protein Structure Visualization Assistant</h3>
-            <p class="project-meta">LLM, RAG, PyMOL, FastAPI</p>
-            <p class="project-desc">
-              An intelligent assistant that interprets natural language queries to visualize protein structures.
-              Integrates LLMs with RAG for semantic understanding and PyMOL for interactive 3D rendering.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-details">
-                        <h3 class="project-title">2. Iris Flower Classification
-  <a href="https://github.com/thurawk/iris-classification" target="_blank" rel="noopener noreferrer" class="meta-link" aria-label="GitHub repository for 2. Iris Flower Classification">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" class="btn-icon" aria-hidden="true">
-  </a>
-</h3>
-            <p class="project-meta">SVM, Scikit-learn</p>
-            <p class="project-desc">
-              Supervised SVM model to classify iris species with StandardScaler preprocessing, GridSearchCV tuning, and
-              evaluation via accuracy, confusion matrix, and classification report. Visualized decision boundaries with
-              PCA and saved the best model pipeline for reuse.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-details">
-                        <h3 class="project-title">3. Customer Segmentation
-  <a href="https://github.com/thurawk/customer-segmentation" target="_blank" rel="noopener noreferrer" class="meta-link" aria-label="GitHub repository for 3. Customer Segmentation">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" class="btn-icon" aria-hidden="true">
-  </a>
-</h3>
-            <p class="project-meta">K-means Clustering</p>
-            <p class="project-desc">
-              Unsupervised K-means clustering on synthetic customer data (age, income, spending) to identify actionable
-              segments. Used StandardScaler preprocessing, elbow and silhouette analysis for k selection, and cluster
-              visualizations; saved the trained model and scaler for reuse.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-details">
-                        <h3 class="project-title">4. Text Classification
-  <a href="https://github.com/thurawk/text-classification" target="_blank" rel="noopener noreferrer" class="meta-link" aria-label="GitHub repository for 4. Text Classification">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" class="btn-icon" aria-hidden="true">
-  </a>
-</h3>
-            <p class="project-meta">NLP, TF-IDF, Naive Bayes, Logistic Regression, SVM</p>
-            <p class="project-desc">
-              Built a supervised text classifier with TF-IDF features, multiple models (Naive Bayes, Logistic
-              Regression, SVM), and GridSearchCV tuning. Evaluated with accuracy and precision/recall/F1, visualized
-              results, and saved the model, vectorizer, and label encoder for deployment.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-item">
-          <div class="project-details">
-                        <h3 class="project-title">5. Quote Sentiment Analysis
-  <a href="https://github.com/thurawk/quote-sentiment-analysis" target="_blank" rel="noopener noreferrer" class="meta-link" aria-label="GitHub repository for 5. Quote Sentiment Analysis">
-    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" class="btn-icon" aria-hidden="true">
-  </a>
-</h3>
-            <p class="project-meta">NLP, Sentiment Analysis, VADER, Naive Bayes, Logistic Regression</p>
-            <p class="project-desc">
-              Built a sentiment analysis pipeline for short quotes by scraping data with requests and BeautifulSoup,
-              labeling with VADER, and training Naive Bayes and Logistic Regression models. Evaluated with confusion
-              matrices and visualizations like sentiment distributions and word clouds.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <p>Contact:
-        <a href="mailto:thurawk@gmail.com" aria-label="Email">📬</a>
-        |
-        <a href="https://www.linkedin.com/in/thura-win-kyaw-b111762a3/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" width="18" height="18" style="vertical-align: middle; filter: invert(20%) sepia(100%) saturate(500%) hue-rotate(180deg);">
+  <!-- ── Footer / Contact ──────────────────────────────────────── -->
+  <footer id="contact" class="site-footer">
+    <div class="footer-inner">
+      <nav class="footer-icons" aria-label="Contact links">
+        <a href="mailto:thurawk@gmail.com" class="btn-icon-link footer-icon-btn" aria-label="Email">
+          <span aria-hidden="true">✉️</span>
         </a>
-      </p>
-      <p>&copy; 2026 Thura Win Kyaw. Design inspired by academic themes.</p>
-    </footer>
-  </div>
+        <a href="https://github.com/thurawk" target="_blank" rel="noopener noreferrer" class="btn-icon-link footer-icon-btn" aria-label="GitHub">
+          <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="" width="20" height="20" class="icon-gh">
+        </a>
+        <a href="https://www.linkedin.com/in/thura-win-kyaw-b111762a3/" target="_blank" rel="noopener noreferrer" class="btn-icon-link footer-icon-btn" aria-label="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="" width="18" height="18" class="icon-li">
+        </a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-quote">&ldquo;Stay Hungry, Stay Foolish.&rdquo; &mdash; Steve Jobs</p>
+      <p>&copy; 2026 Thura Win Kyaw</p>
+    </div>
+  </footer>
 
-  <!-- External JS -->
   <script src="js/main.js" defer></script>
 </body>
-
 </html>
