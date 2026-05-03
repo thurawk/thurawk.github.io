@@ -457,22 +457,22 @@ img { max-width: 100%; display: block; }
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.4rem;
   flex-wrap: wrap;
 }
 
 .hero-ctas .btn-icon-link {
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
 }
 
 .btn-primary {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 0.95rem;
+  padding: 0.45rem 0.8rem;
   background-color: var(--accent);
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 500;
   border-radius: 8px;
   transition: background-color 0.15s, box-shadow 0.15s, transform 0.15s;
@@ -495,10 +495,10 @@ img { max-width: 100%; display: block; }
 .btn-ghost {
   display: inline-flex;
   align-items: center;
-  padding: 0.5rem 0.95rem;
+  padding: 0.45rem 0.8rem;
   border: 1px solid var(--border);
   color: var(--text-2);
-  font-size: 0.8rem;
+  font-size: 0.76rem;
   font-weight: 500;
   border-radius: 8px;
   transition: color 0.15s, border-color 0.15s, transform 0.15s;
@@ -1059,6 +1059,13 @@ img { max-width: 100%; display: block; }
 .about-research {
   margin-top: 0.5rem;
 }
+.research-line {
+  margin: 0;
+  font-size: 0.89rem;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+
 
 /* Education */
 .education-block {
@@ -1138,73 +1145,53 @@ img { max-width: 100%; display: block; }
 }
 
 /* Skills */
-.skills-grid {
+/* Skills — CV-style two-column rows */
+.skills-table {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  margin: 0;
+  border-top: 1px solid var(--border);
 }
 
-/* Featured AI/ML card — full width */
-.skill-card--featured {
-  border-left: 3px solid var(--accent);
-  background-color: var(--surface);
+.skill-row {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 2.5rem;
+  align-items: baseline;
+  padding: 1.15rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.15s;
 }
 
-[data-theme="dark"] .skill-card--featured {
-  background-color: rgba(var(--accent-rgb), 0.03);
+.skill-row:hover {
+  background-color: var(--subtle);
 }
 
-.skill-card {
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.4rem 1.5rem;
-  transition: box-shadow 0.2s, border-color 0.2s, transform 0.2s;
-}
-
-.skill-card:hover {
-  border-color: rgba(var(--accent-rgb), 0.3);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
-}
-
-[data-theme="dark"] .skill-card:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-}
-
-.skill-card-header {
-  margin-bottom: 0.85rem;
-}
-
-.skill-card-title {
+.skill-row-label {
   font-family: var(--font-mono);
-  font-size: 0.68rem;
+  font-size: 0.72rem;
   font-weight: 500;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--text-3);
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
+  margin: 0;
+  padding-left: 0.5rem;
 }
 
-.skill-card-title::after {
-  content: '';
-  display: block;
-  width: 24px;
-  height: 1.5px;
-  background: linear-gradient(90deg, var(--accent), var(--accent-alt));
-  border-radius: 2px;
-  flex-shrink: 0;
+.skill-row-list {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text);
+  padding-right: 0.5rem;
 }
 
-/* Chips */
-.skill-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem;
+.lang-level {
+  color: var(--text-3);
+  font-size: 0.85em;
 }
 
+/* Chips — still used in About > Research Interests */
 .skill-chip {
   display: inline-flex;
   align-items: center;
@@ -1222,20 +1209,6 @@ img { max-width: 100%; display: block; }
 .skill-chip:hover {
   border-color: rgba(var(--accent-rgb), 0.4);
   color: var(--accent);
-}
-
-.chip-level {
-  font-size: 0.65rem;
-  color: var(--accent);
-  letter-spacing: 0.04em;
-  opacity: 0.85;
-}
-
-/* Secondary 4-card grid */
-.skills-secondary {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 1rem;
 }
 
 /* ============================================================
@@ -1355,9 +1328,10 @@ img { max-width: 100%; display: block; }
     gap: 2rem;
   }
 
-  /* Skills secondary — 2 columns on iPad */
-  .skills-secondary {
-    grid-template-columns: repeat(2, 1fr);
+  /* Skills — narrower label column on iPad */
+  .skill-row {
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
   }
 }
 
@@ -1417,9 +1391,23 @@ img { max-width: 100%; display: block; }
     padding: 0.3rem 0.65rem;
   }
 
-  /* CTA buttons — wrap cleanly */
+  /* CTA buttons — keep all 5 items on one line on phones */
   .hero-ctas {
-    gap: 0.5rem;
+    gap: 0.35rem;
+    flex-wrap: nowrap;
+  }
+
+  .hero-ctas .btn-primary,
+  .hero-ctas .btn-ghost {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+  }
+
+  .hero-ctas .btn-icon-link {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
   }
 
   /* ── Featured ── */
@@ -1447,8 +1435,18 @@ img { max-width: 100%; display: block; }
 
   .edu-dates { text-align: left; }
 
-  /* ── Skills — single column on mobile ── */
-  .skills-secondary { grid-template-columns: 1fr; }
+  /* ── Skills — stack label above list on mobile ── */
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    padding: 1rem 0;
+  }
+
+  .skill-row-label,
+  .skill-row-list {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 @media (max-width: 480px) {
