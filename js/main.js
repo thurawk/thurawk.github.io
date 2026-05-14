@@ -61,20 +61,17 @@ document.addEventListener('DOMContentLoaded', () => {
       .map((id) => document.getElementById(id))
       .filter(Boolean);
 
+    // Thin trigger band ~40–45% from the top of the viewport. Whichever section
+    // overlaps that band is "current" — eliminates dead zones the threshold
+    // approach left between sections of different heights.
     const navObserver = new IntersectionObserver((entries) => {
-      const visible = entries.filter((e) => e.isIntersecting);
-      if (!visible.length) return;
-
-      // Prefer sections whose top is at or below the viewport edge
-      const above = visible.filter((e) => e.boundingClientRect.top >= 0);
-      const target = above.length
-        ? above.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top)[0]
-        : visible.sort((a, b) => Math.abs(a.boundingClientRect.top) - Math.abs(b.boundingClientRect.top))[0];
-
-      navLinks.forEach((l) => l.classList.remove('active'));
-      const active = document.querySelector(`.nav-link[href="#${target.target.id}"]`);
-      if (active) active.classList.add('active');
-    }, { root: null, rootMargin: '0px', threshold: 0.2 });
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((l) => l.classList.remove('active'));
+        const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      });
+    }, { root: null, rootMargin: '-40% 0px -55% 0px', threshold: 0 });
 
     linkedSections.forEach((s) => navObserver.observe(s));
   }

@@ -4,7 +4,7 @@
 
 :root {
   /* Surface */
-  --bg:          #F5F7FB;
+  --bg:          #FFFFFF;
   --surface:     #FFFFFF;
   --subtle:      #EEF2F8;
   --border:      #E5E7EB;
@@ -601,7 +601,7 @@ img { max-width: 100%; display: block; }
 }
 
 #skills .section-inner {
-  padding-bottom: 2rem;
+  padding-bottom: 0.5rem;
 }
 
 .section-label {
@@ -632,8 +632,14 @@ img { max-width: 100%; display: block; }
    ============================================================ */
 
 .section-featured {
-  background-color: var(--surface);
   border-top: 1px solid var(--border);
+}
+
+[data-theme="dark"] .section-featured {
+  background-color: var(--bg);
+}
+
+.section-work {
   border-bottom: 1px solid var(--border);
 }
 
@@ -642,12 +648,16 @@ img { max-width: 100%; display: block; }
   grid-template-columns: 1fr 240px;
   gap: 3rem;
   align-items: start;
-  background-color: var(--bg);
+  background-color: #F5F7FB;
   border: 1px solid var(--border);
   border-left: 3px solid var(--accent);
   border-radius: var(--radius-lg);
   padding: 2.25rem;
   transition: border-color 0.3s;
+}
+
+[data-theme="dark"] .featured-card {
+  background-color: var(--bg);
 }
 
 .featured-badges {
@@ -806,7 +816,7 @@ img { max-width: 100%; display: block; }
 }
 
 .project-card {
-  background-color: var(--surface);
+  background-color: #F5F7FB;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 1.5rem;
@@ -816,6 +826,10 @@ img { max-width: 100%; display: block; }
   position: relative;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+[data-theme="dark"] .project-card {
+  background-color: var(--surface);
 }
 
 /* Top gradient bar on hover */
@@ -912,6 +926,10 @@ img { max-width: 100%; display: block; }
   background-color: var(--surface);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .section-research {
+  background-color: var(--bg);
 }
 
 .research-grid {
@@ -1014,15 +1032,13 @@ img { max-width: 100%; display: block; }
 }
 
 .timeline-org a {
-  color: var(--text-2);
-  border-bottom: 1px solid var(--border);
-  transition: color 0.15s, border-color 0.15s;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+  transition: border-color 0.15s, opacity 0.15s;
 }
 
 .timeline-org a:hover {
-  color: var(--accent);
   border-color: var(--accent);
-  opacity: 1;
 }
 
 .timeline-bullets {
@@ -1059,15 +1075,13 @@ img { max-width: 100%; display: block; }
 }
 
 .about-bio a {
-  color: var(--text);
-  border-bottom: 1px solid var(--border);
-  transition: color 0.15s, border-color 0.15s;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+  transition: border-color 0.15s, opacity 0.15s;
 }
 
 .about-bio a:hover {
-  color: var(--accent);
   border-color: var(--accent);
-  opacity: 1;
 }
 
 .about-research {
@@ -1110,15 +1124,13 @@ img { max-width: 100%; display: block; }
 }
 
 .edu-org a {
-  color: var(--text-2);
-  border-bottom: 1px solid var(--border);
-  transition: color 0.15s, border-color 0.15s;
+  color: var(--accent);
+  border-bottom: 1px solid rgba(var(--accent-rgb), 0.3);
+  transition: border-color 0.15s, opacity 0.15s;
 }
 
 .edu-org a:hover {
-  color: var(--accent);
   border-color: var(--accent);
-  opacity: 1;
 }
 
 .edu-dates {
@@ -1238,7 +1250,7 @@ img { max-width: 100%; display: block; }
 .footer-inner {
   max-width: var(--w-max);
   margin: 0 auto;
-  padding: 2rem 1.5rem 0.5rem;
+  padding: 1rem 1.5rem 0.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1284,7 +1296,7 @@ img { max-width: 100%; display: block; }
 .footer-bottom {
   max-width: var(--w-max);
   margin: 0 auto;
-  padding: 0.5rem 0.5rem 0.5rem;
+  padding: 0 0.5rem 0.75rem;
   text-align: center;
 }
 
