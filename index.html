@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI/ML/Electrical Engineer specializing in RAG pipelines, LangChain, and LLM-powered systems. Building intelligent biomedical AI at AIdanBio.">
-  <meta property="og:title" content="Thura Win Kyaw — AI/ML/Electrical Engineer">
-  <meta property="og:description" content="RAG · LangChain · Biomedical AI · LLM Systems">
+  <meta name="description" content="VLM/ML research candidate studying reinforcement learning, preference-based post-training, and hallucination mitigation in small vision-language models.">
+  <meta property="og:title" content="Thura Win Kyaw — VLM/ML Research Candidate">
+  <meta property="og:description" content="Vision-Language Models · GRPO · DPO · Hallucination &amp; Faithfulness">
   <meta property="og:image" content="https://thurawk.github.io/data/thura_profile.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -15,7 +15,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://thurawk.github.io/">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <title>Thura Win Kyaw — AI/ML/Electrical  Engineer</title>
+  <title>Thura Win Kyaw — VLM/ML Research Candidate</title>
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,7 +31,7 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Thura Win Kyaw",
-    "jobTitle": "AI/ML/Electrical Engineer",
+    "jobTitle": "VLM/ML Research Candidate",
     "url": "https://thurawk.github.io",
     "image": "https://thurawk.github.io/data/thura_profile.jpg",
     "sameAs": [
@@ -42,7 +42,7 @@
       "@type": "CollegeOrUniversity",
       "name": "Chungnam National University"
     },
-    "knowsAbout": ["Artificial Intelligence", "Machine Learning", "RAG", "LangChain", "Python", "FastAPI"]
+    "knowsAbout": ["AI/ML", "RAG", "Vision-Language Models", "Reinforcement Learning", "GRPO", "DPO", "VLM Hallucination", "Multimodal Faithfulness"]
   }
   </script>
 </head>
@@ -93,24 +93,25 @@
 
         <div class="about-bio reveal" style="--reveal-delay:80ms">
           <p>
-            I’m an AI/ML Engineer Intern at
-            <a href="http://aidanbio.com/" target="_blank" rel="noopener noreferrer">AIdanBio</a>
-            in Daejeon, South Korea, currently developing intelligent biomedical knowledge retrieval.
-            I'm completing my B.E. in Electrical Engineering at
-            <a href="https://www.cnu.ac.kr" target="_blank" rel="noopener noreferrer">Chungnam National University.</a>
+            I’m an undergraduate researcher focused on post-training small Vision-Language Models (VLMs)
+            to improve reasoning faithfulness and reduce hallucination. My current research explores
+            reinforcement learning and preference-based post-training, including GRPO and DPO, with an
+            emphasis on data-, label-, and memory-efficient methods.
           </p>
           <p>
-            My work focuses on RAG pipelines, LangChain-based systems, and LLM-powered conversational
-            AI &mdash; from vector search and prompt engineering to FastAPI backends and local model
-            deployment with Ollama.
+            Alongside my research, I’m completing a B.E. in Electrical Engineering at
+            <a href="https://www.cnu.ac.kr" target="_blank" rel="noopener noreferrer">Chungnam National University</a>
+            and work as an AI/ML Engineer Intern at
+            <a href="http://aidanbio.com/" target="_blank" rel="noopener noreferrer">AIdanBio</a>, where I build
+            LLM/RAG systems, AI backends, and biomedical AI applications.
           </p>
         </div>
 
         <div class="about-research reveal" style="--reveal-delay:160ms">
           <p class="hero-research-label">Research Interests</p>
           <p class="research-line">
-            Retrieval-Augmented Generation (RAG); NLP; Prompt Engineering; LLM Evaluation;
-            Conversational AI Systems; and efficient local LLM deployment.
+            AI/ML; RAG; Vision-Language Models; Reinforcement Learning; Preference-Based Post-Training (GRPO, DPO);
+            Hallucination Mitigation; Faithful and Grounded Multimodal Reasoning; Efficient Small VLMs.
           </p>
         </div>
       </div>
@@ -124,7 +125,7 @@
           <h1 class="hero-name reveal" style="--reveal-delay:80ms">Thura Win Kyaw</h1>
           <h2 class="hero-role reveal" style="--reveal-delay:160ms">
             <span class="status-dot" aria-hidden="true"></span>
-            AI/ML/Electrical Engineer
+            VLM / ML Research Candidate
           </h2>
           <div class="hero-ctas reveal" style="--reveal-delay:320ms">
             <a href="#featured" class="btn-primary">View Projects</a>
@@ -145,12 +146,85 @@
     </div>
   </section>
 
-  <!-- ── Featured Project ──────────────────────────────────────── -->
+  <!-- ── Research Projects ─────────────────────────────────────── -->
   <section id="featured" class="section-featured" aria-labelledby="featured-label">
     <div class="section-inner">
-      <div class="section-label reveal" id="featured-label">Featured Project</div>
+      <div class="section-label reveal" id="featured-label">Research Projects</div>
 
-      <div class="featured-card reveal">
+      <div class="featured-stack">
+
+      <article class="featured-card featured-card--research reveal">
+        <div class="featured-content">
+          <div class="featured-badges">
+            <span class="badge badge--org">Independent Research</span>
+            <span class="badge badge--pending">Results Pending</span>
+          </div>
+          <h2 class="featured-title">MoonDPO</h2>
+          <p class="featured-subtitle">Memory-Efficient DPO for Hallucination Mitigation in Small VLMs</p>
+          <div class="tech-tags">
+            <span>Moondream2 1.9B</span><span>DPO</span><span>LoRA</span><span>COCO</span><span>POPE</span><span>CHAIR</span>
+          </div>
+          <p class="featured-desc">
+            Applies LoRA-based DPO to Moondream2 (1.9B) using preference pairs automatically
+            generated from COCO annotations, without human or API labels. The DPO objective is
+            derived and implemented from scratch, and the full pipeline is reproducible on a
+            16 GB laptop.
+          </p>
+          <p class="result-placeholder">
+            <strong>Results placeholder:</strong> POPE-Adversarial F1: __ &rarr; __; CHAIR<sub>i</sub>: __ &rarr; __
+          </p>
+          <div class="featured-footer">
+            <a href="https://github.com/thurawk/MoonDPO" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub Repository ↗</a>
+          </div>
+        </div>
+
+        <div class="featured-diagram research-summary" aria-label="MoonDPO research setup">
+          <p class="diagram-label">Research Setup</p>
+          <dl class="research-facts">
+            <div><dt>Base model</dt><dd>Moondream2 (1.9B)</dd></div>
+            <div><dt>Adaptation</dt><dd>LoRA + DPO</dd></div>
+            <div><dt>Preference data</dt><dd>COCO-derived pairs</dd></div>
+            <div><dt>Compute</dt><dd>16 GB laptop</dd></div>
+            <div><dt>Evaluation</dt><dd>POPE + CHAIR</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="featured-card featured-card--research reveal">
+        <div class="featured-content">
+          <div class="featured-badges">
+            <span class="badge badge--org">Undergraduate Research · AIdanBio</span>
+            <span class="badge badge--progress">In Progress</span>
+          </div>
+          <h2 class="featured-title">AIdanMed</h2>
+          <p class="featured-subtitle">Label-Efficient VLM Post-Training for Faithful, Grounded Medical Reasoning</p>
+          <div class="tech-tags">
+            <span>Medical VLM</span><span>GRPO</span><span>SFT</span><span>Grounded Reasoning</span><span>Bounding Boxes</span>
+          </div>
+          <p class="featured-desc">
+            Trains a VLM with GRPO to produce reasoning together with a bounding box that must
+            remain faithful to the model’s own reasoning, targeting label-efficient and grounded
+            medical reasoning.
+          </p>
+          <p class="status-note">
+            <strong>Status: In progress.</strong> SFT cold-start complete; GRPO post-training is
+            running on 8&times;A100 GPUs. No evaluation results reported yet.
+          </p>
+        </div>
+
+        <div class="featured-diagram research-summary" aria-label="AIdanMed research setup">
+          <p class="diagram-label">Research Setup</p>
+          <dl class="research-facts">
+            <div><dt>Setting</dt><dd>Medical vision-language</dd></div>
+            <div><dt>Objective</dt><dd>Faithful grounded reasoning</dd></div>
+            <div><dt>Output</dt><dd>Reasoning + bounding box</dd></div>
+            <div><dt>Post-training</dt><dd>SFT cold-start + GRPO</dd></div>
+            <div><dt>Current stage</dt><dd>GRPO training</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="featured-card reveal">
         <div class="featured-content">
           <div class="featured-badges">
             <span class="badge badge--org">Built at AIdanBio</span>
@@ -205,89 +279,7 @@
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Projects ─────────────────────────────────────────────── -->
-  <section id="work" class="section-work" aria-labelledby="work-label">
-    <div class="section-inner">
-      <div class="section-label reveal" id="work-label">Projects</div>
-
-      <div class="projects-grid">
-
-        <article class="project-card reveal" style="--reveal-delay:0ms">
-          <header class="card-header">
-            <h3 class="card-title">
-              Iris Flower Classification
-              <a href="https://github.com/thurawk/iris-classification" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Iris Flower Classification on GitHub">↗</a>
-            </h3>
-            <p class="card-stack">Python &middot; SVM &middot; Scikit-learn &middot; PCA</p>
-          </header>
-          <p class="card-desc">
-            Supervised SVM classifier with StandardScaler preprocessing and GridSearchCV
-            hyperparameter tuning. Evaluated via accuracy, confusion matrix, and F1 score.
-            Decision boundaries visualized with PCA; best model pipeline serialized for reuse.
-          </p>
-          <footer class="card-footer">
-            <a href="https://github.com/thurawk/iris-classification" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
-          </footer>
-        </article>
-
-        <article class="project-card reveal" style="--reveal-delay:80ms">
-          <header class="card-header">
-            <h3 class="card-title">
-              Customer Segmentation
-              <a href="https://github.com/thurawk/customer-segmentation" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Customer Segmentation on GitHub">↗</a>
-            </h3>
-            <p class="card-stack">Python &middot; K-means &middot; Scikit-learn</p>
-          </header>
-          <p class="card-desc">
-            Unsupervised K-means clustering on customer demographic data to identify
-            actionable segments. Elbow method and silhouette analysis for optimal k
-            selection. Trained model and scaler serialized for downstream deployment.
-          </p>
-          <footer class="card-footer">
-            <a href="https://github.com/thurawk/customer-segmentation" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
-          </footer>
-        </article>
-
-        <article class="project-card reveal" style="--reveal-delay:160ms">
-          <header class="card-header">
-            <h3 class="card-title">
-              Text Classification
-              <a href="https://github.com/thurawk/text-classification" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Text Classification on GitHub">↗</a>
-            </h3>
-            <p class="card-stack">Python &middot; NLP &middot; TF-IDF &middot; SVM &middot; Logistic Regression</p>
-          </header>
-          <p class="card-desc">
-            Multi-model text classifier with TF-IDF features across Naive Bayes, Logistic
-            Regression, and SVM with GridSearchCV tuning. Evaluated with precision, recall,
-            and F1. Model, vectorizer, and label encoder saved for deployment.
-          </p>
-          <footer class="card-footer">
-            <a href="https://github.com/thurawk/text-classification" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
-          </footer>
-        </article>
-
-        <article class="project-card reveal" style="--reveal-delay:240ms">
-          <header class="card-header">
-            <h3 class="card-title">
-              Quote Sentiment Analysis
-              <a href="https://github.com/thurawk/quote-sentiment-analysis" target="_blank" rel="noopener noreferrer" class="card-ext" aria-label="View Quote Sentiment Analysis on GitHub">↗</a>
-            </h3>
-            <p class="card-stack">Python &middot; NLP &middot; VADER &middot; BeautifulSoup</p>
-          </header>
-          <p class="card-desc">
-            End-to-end sentiment pipeline for short quotes &mdash; scraped with requests and
-            BeautifulSoup, labeled with VADER, trained with Naive Bayes and Logistic
-            Regression. Evaluated with confusion matrices and word cloud visualizations.
-          </p>
-          <footer class="card-footer">
-            <a href="https://github.com/thurawk/quote-sentiment-analysis" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub ↗</a>
-          </footer>
-        </article>
-
+      </article>
       </div>
     </div>
   </section>
@@ -362,41 +354,82 @@
       <dl class="skills-table">
 
         <div class="skill-row reveal" style="--reveal-delay:0ms">
-          <dt class="skill-row-label">LLM Systems</dt>
-          <dd class="skill-row-list">RAG Pipelines, Agentic RAG, LangChain Orchestration, Conversational AI, Prompt Engineering, LLM Evaluation, Local LLM Deployment (Ollama)</dd>
+          <dt class="skill-row-label">VLM / Multimodal AI</dt>
+          <dd class="skill-row-list">Vision-Language Models, Hallucination Mitigation, Faithful and Grounded Multimodal Reasoning, Small VLMs</dd>
         </div>
 
         <div class="skill-row reveal" style="--reveal-delay:120ms">
-          <dt class="skill-row-label">Retrieval &amp; Search</dt>
-          <dd class="skill-row-list">Vector Databases, Semantic Vector Search</dd>
+          <dt class="skill-row-label">Post-Training</dt>
+          <dd class="skill-row-list">Supervised Fine-Tuning (SFT), Reinforcement Learning, GRPO, DPO, LoRA, Preference Data Generation, Knowledge Distillation</dd>
         </div>
 
         <div class="skill-row reveal" style="--reveal-delay:180ms">
+          <dt class="skill-row-label">Evaluation</dt>
+          <dd class="skill-row-list">POPE, CHAIR, LLM/VLM Evaluation, Hallucination and Faithfulness Analysis</dd>
+        </div>
+
+        <div class="skill-row reveal" style="--reveal-delay:240ms">
+          <dt class="skill-row-label">Applied LLM Systems</dt>
+          <dd class="skill-row-list">RAG Pipelines, LangChain Orchestration, Vector Databases, Prompt Engineering, Local LLM Deployment (Ollama)</dd>
+        </div>
+
+        <div class="skill-row reveal" style="--reveal-delay:300ms">
           <dt class="skill-row-label">Backend / Systems</dt>
           <dd class="skill-row-list">FastAPI, API Development, AI Model Integration</dd>
         </div>
 
-        <div class="skill-row reveal" style="--reveal-delay:240ms">
+        <div class="skill-row reveal" style="--reveal-delay:360ms">
           <dt class="skill-row-label">Tools &amp; Infrastructure</dt>
-          <dd class="skill-row-list">Git, GitHub, VS Code, MS Office, Google Workspace</dd>
+          <dd class="skill-row-list">Git, GitHub, VS Code, Claude Code</dd>
         </div>
 
-        <div class="skill-row reveal" style="--reveal-delay:300ms">
+        <div class="skill-row reveal" style="--reveal-delay:420ms">
           <dt class="skill-row-label">Programming Languages</dt>
           <dd class="skill-row-list">Python, C</dd>
         </div>
 
-         <div class="skill-row reveal" style="--reveal-delay:420ms">
+         <div class="skill-row reveal" style="--reveal-delay:480ms">
           <dt class="skill-row-label">Languages</dt>
           <dd class="skill-row-list">Burmese <span class="lang-level">(Native)</span>, English <span class="lang-level">(Fluent)</span>, Korean <span class="lang-level">(TOPIK 5)</span></dd>
         </div>
 
-        <div class="skill-row reveal" style="--reveal-delay:360ms">
+        <div class="skill-row reveal" style="--reveal-delay:540ms">
           <dt class="skill-row-label">Operating Systems</dt>
           <dd class="skill-row-list">Windows, Linux, macOS</dd>
         </div>
 
       </dl>
+    </div>
+  </section>
+
+  <!-- ── Foundational ML ──────────────────────────────────────── -->
+  <section id="work" class="section-work section-foundational" aria-labelledby="work-label">
+    <div class="section-inner">
+      <div class="section-label reveal" id="work-label">Foundational ML</div>
+
+      <div class="foundational-links reveal">
+
+        <a href="https://github.com/thurawk/iris-classification" target="_blank" rel="noopener noreferrer" class="foundational-link">
+          <span class="foundational-name">Iris Flower Classification</span>
+          <span class="foundational-stack">SVM · Scikit-learn · PCA ↗</span>
+        </a>
+
+        <a href="https://github.com/thurawk/customer-segmentation" target="_blank" rel="noopener noreferrer" class="foundational-link">
+          <span class="foundational-name">Customer Segmentation</span>
+          <span class="foundational-stack">K-means · Scikit-learn ↗</span>
+        </a>
+
+        <a href="https://github.com/thurawk/text-classification" target="_blank" rel="noopener noreferrer" class="foundational-link">
+          <span class="foundational-name">Text Classification</span>
+          <span class="foundational-stack">TF-IDF · SVM · Logistic Regression ↗</span>
+        </a>
+
+        <a href="https://github.com/thurawk/quote-sentiment-analysis" target="_blank" rel="noopener noreferrer" class="foundational-link">
+          <span class="foundational-name">Quote Sentiment Analysis</span>
+          <span class="foundational-stack">VADER · BeautifulSoup · Logistic Regression ↗</span>
+        </a>
+
+      </div>
     </div>
   </section>
 

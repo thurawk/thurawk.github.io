@@ -8,7 +8,7 @@
     left=2 cm, % seperation between body and page edge from the left
     right=2 cm, % seperation between body and page edge from the right
     footskip=1.0 cm, % seperation between body and footer
-    % showframe % for debugging 
+    % showframe % for debugging
 ]{geometry} % for adjusting page geometry
 \usepackage{titlesec} % for customizing section titles
 \usepackage{tabularx} % for making tables with fixed width columns
@@ -168,45 +168,76 @@
         \kern 7.0 pt%
         \kern 7.0 pt%
         \AND%
-        
+
         \kern 0.0 pt%
-        \href{mailto:thurawk@gmail.com}{thurawk@gmail.com} \textbar{} 
+        \href{mailto:thurawk@gmail.com}{thurawk@gmail.com} \textbar{}
         \href{https://github.com/thurawk}{github.com/thurawk}
     \end{header}
 
     \section{Profile}
     \begin{onecolentry}
-    Aspiring AI/ML engineer with hands-on experience in building RAG-powered assistants, developing full-stack AI applications, and designing LLM-based conversational agents. Skilled in transforming research ideas into practical systems.
+    I’m an undergraduate researcher focused on post-training small Vision-Language Models (VLMs) to improve reasoning faithfulness and reduce hallucination. My current research explores reinforcement learning and preference-based post-training, including GRPO and DPO, with an emphasis on data-, label-, and memory-efficient methods. Alongside my research, I’m completing a B.E. in Electrical Engineering at Chungnam National University and work as an AI/ML Engineer Intern at AIdanBio, where I build LLM/RAG systems, AI backends, and biomedical AI applications.
     \end{onecolentry}
 
     \vspace{5 pt - 0.3 cm}
 
     \section{Research Interests}
-        
+
         \begin{onecolentry}
-            \href{https://rendercv.com}I am passionate about artificial intelligence, machine learning, and conversational AI, with a focus on Retrieval-Augmented Generation (RAG), chat-bot development, and the integration of vector databases to enhance user interaction and contextual understanding. Committed to developing intelligent systems that deliver accurate, context-aware, and user-centric solutions for real-world applications.
+            Vision-Language Models; Reinforcement Learning; Preference-Based Post-Training (GRPO, DPO); Hallucination Mitigation; Faithful and Grounded Multimodal Reasoning; Efficient Small VLMs.
         \end{onecolentry}
 
         \vspace{-0.1 cm}
 
-    \section{Education}
-        
+    \section{Research Projects}
+
         \begin{twocolentry}{
-            Sept 2022 – Present
         }
-            \textbf{\href{https://www.cnu.ac.kr}{\textcolor{linkBlue}{Chungnam National University}}}, B.E. in Electrical Engineering\end{twocolentry}
+            \textbf{MoonDPO -- Memory-Efficient DPO for Hallucination Mitigation in Small VLMs} \href{https://github.com/thurawk/MoonDPO}{\faGithub}\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{Coursework:} Computer Programming (C), Computer Scientific Thinking, Linear Algebra, AI and Future Society, Modern Control Theory and Design, Sensor and Measurement Engineering
-                \item \textbf{Certifications:} HarvardX: CS50's Introduction to Programming with Python, CS50: Introduction to Computer Science, CS50's Introduction to Artificial Intelligence with Python
-
+                \item Applies LoRA-based DPO to Moondream2 (1.9B) using preference pairs automatically generated from COCO annotations, without human or API labels.
+                \item Derived and implemented the DPO objective from scratch; the full pipeline is reproducible on a 16 GB laptop.
+                \item Evaluated on POPE and CHAIR. \textbf{Results placeholder:} POPE-Adversarial F1: \_\_ $\rightarrow$ \_\_; CHAIR$_i$: \_\_ $\rightarrow$ \_\_.
             \end{highlights}
         \end{onecolentry}
-   
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        }
+            \textbf{AIdanMed -- Label-Efficient VLM Post-Training for Faithful, Grounded Medical Reasoning}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Undergraduate research at AIdanBio training a VLM with GRPO to produce reasoning together with a bounding box that must remain faithful to the model's own reasoning.
+                \item \textbf{Status: In progress.} SFT cold-start complete; GRPO post-training is running on 8$\times$A100 GPUs. No evaluation results reported yet.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+
+        \begin{twocolentry}{
+        }
+            \textbf{ChatPDB – Protein Structure Visualization Assistant (LLM + RAG + PyMOL)}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item Built an assistant that interprets natural language queries to visualize protein structures with LLM + RAG and PyMOL rendering.
+            \item Implemented a retriever pipeline (BM25 + FAISS + Cross-Encoder) using UniProt annotations and enabled session-based workflows.
+            \item Integrated FastAPI services and a CLI using local LLMs (Ollama) for interactive usage.
+            \end{highlights}
+        \end{onecolentry}
+
+    \vspace{0.2 cm}
+
     \section{Experience}
-        
+
         \begin{twocolentry}{
             Dec 2024 – Present
         }
@@ -215,10 +246,10 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Designed and maintained backend systems with a focus on AI model integration, API development, and database management
-                \item Engineered and optimized prompts for Large Language Models (LLMs) to ensure personalized, context-aware responses across various use cases
-                \item Developed and deployed Retrieval-Augmented Generation (RAG) pipelines to enhance the accuracy and relevance of AI-generated outputs
-                \item Contributed to building intelligent, production-grade systems for life sciences and biomedical applications
+                \item Developed AI backend systems, APIs, model-serving infrastructure, and LLM-powered applications.
+                \item Built RAG pipelines using vector databases, semantic search, prompt engineering, and domain-specific knowledge bases.
+                \item Fine-tuned Vision-Language Models (VLMs) for medical AI using multimodal SFT, grounding, GRPO, and evaluation pipelines.
+                \item Worked on knowledge distillation and teacher--student training to transfer reasoning from large multimodal models to smaller models.
             \end{highlights}
         \end{onecolentry}
         \vspace{0.20 cm}
@@ -235,81 +266,22 @@
         \end{onecolentry}
 
 
-    \section{Projects}
-
+    \section{Education}
 
         \begin{twocolentry}{
+            Sept 2022 – Present
         }
-            \textbf{ChatPDB – Protein Structure Visualization Assistant (LLM + RAG + PyMOL)}\end{twocolentry}
+            \textbf{\href{https://www.cnu.ac.kr}{\textcolor{linkBlue}{Chungnam National University}}}, B.E. in Electrical Engineering\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-            \item Built an assistant that interprets natural language queries to visualize protein structures with LLM + RAG and PyMOL rendering.
-            \item Implemented a retriever pipeline (BM25 + FAISS + Cross-Encoder) using UniProt annotations and enabled session-based workflows.
-            \item Integrated FastAPI services and a CLI using local LLMs (Ollama) for interactive usage.
+                \item \textbf{Coursework:} Computer Programming (C), Computer Scientific Thinking, Linear Algebra, AI and Future Society, Modern Control Theory and Design, Sensor and Measurement Engineering
+                \item \textbf{Certifications:} HarvardX: CS50's Introduction to Programming with Python, CS50: Introduction to Computer Science, CS50's Introduction to Artificial Intelligence with Python
+
             \end{highlights}
         \end{onecolentry}
 
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-        }
-            \textbf{Iris Flower Classification (SVM)} \href{https://github.com/thurawk/iris-classification}{\faGithub}\end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Built an SVM classifier with StandardScaler preprocessing, GridSearchCV tuning, and evaluation via accuracy, confusion matrix, and classification report.
-                \item Visualized decision boundaries with PCA and saved the best model pipeline for reuse.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-        }
-            \textbf{Customer Segmentation (K-means)} \href{https://github.com/thurawk/customer-segmentation}{\faGithub}\end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Applied K-means clustering on synthetic customer data (age, income, spending) to identify actionable segments.
-                \item Used StandardScaler preprocessing, elbow and silhouette analysis for k selection, and cluster visualizations; saved the trained model and scaler.
-            \end{highlights}
-        \end{onecolentry}
-        
-    \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-        }
-            \textbf{Text Classification} \href{https://github.com/thurawk/text-classification}{\faGithub}\end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Built a supervised text classifier with TF-IDF features and multiple models (Naive Bayes, Logistic Regression, SVM) with GridSearchCV tuning.
-                \item Evaluated with accuracy and precision/recall/F1, visualized results, and saved the model, vectorizer, and label encoder for deployment.
-            \end{highlights}
-        \end{onecolentry}
-
-    \vspace{0.2 cm}
-
-        \begin{twocolentry}{
-        }
-            \textbf{Quote Sentiment Analysis} \href{https://github.com/thurawk/quote-sentiment-analysis}{\faGithub}\end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Built a sentiment analysis pipeline for short quotes by scraping data with requests and BeautifulSoup, labeling with VADER, and training Naive Bayes and Logistic Regression models.
-                \item Evaluated with confusion matrices and visualizations like sentiment distributions and word clouds.
-            \end{highlights}
-        \end{onecolentry}
-
-    \vspace{0.6 cm}
-
-       \vspace{0.15 cm}
        \section{Skills}
         \begin{onecolentry}
         \textbf{Programming Languages:} Python, C, MATLAB.
@@ -317,17 +289,20 @@
 
         \vspace{0.2 cm}
 
-        \textbf{AI/ML:}
+        \textbf{VLM Research \& Post-Training:}
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Retrieval-Augmented Generation (RAG)
-                \item LangChain
-                \item Prompt Engineering
-                \item Vector Databases
-                \item LLM-Powered Chatbots
-                \item Local LLM Deployment (Ollama)
+                \item Vision-Language Models; Hallucination Mitigation; Faithful and Grounded Multimodal Reasoning; Small VLMs
+                \item Reinforcement Learning; SFT; GRPO; DPO; LoRA; Preference Data Generation
+                \item POPE; CHAIR; LLM/VLM Evaluation; Hallucination and Faithfulness Analysis
             \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{onecolentry}
+        \textbf{Applied LLM Systems:} RAG Pipelines, LangChain Orchestration, Vector Databases, Prompt Engineering, Local LLM Deployment (Ollama), FastAPI, API Development, AI Model Integration.
         \end{onecolentry}
 
         \vspace{0.2 cm}
@@ -354,6 +329,16 @@
         \begin{onecolentry}
         \textbf{Languages:} Burmese (Native), English (Fluent), Korean (TOPIK 5).
         \end{onecolentry}
+    \section{Foundational ML}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item \textbf{Iris Flower Classification (SVM)} \href{https://github.com/thurawk/iris-classification}{\faGithub}
+                \item \textbf{Customer Segmentation (K-means)} \href{https://github.com/thurawk/customer-segmentation}{\faGithub}
+                \item \textbf{Text Classification} \href{https://github.com/thurawk/text-classification}{\faGithub}
+                \item \textbf{Quote Sentiment Analysis} \href{https://github.com/thurawk/quote-sentiment-analysis}{\faGithub}
+            \end{highlights}
+        \end{onecolentry}
+
 \section*{References}
 Available upon request.
 \end{document}

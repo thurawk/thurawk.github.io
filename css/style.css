@@ -643,6 +643,12 @@ img { max-width: 100%; display: block; }
   border-bottom: 1px solid var(--border);
 }
 
+.featured-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .featured-card {
   display: grid;
   grid-template-columns: 1fr 240px;
@@ -662,6 +668,7 @@ img { max-width: 100%; display: block; }
 
 .featured-badges {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.45rem;
   margin-bottom: 1rem;
 }
@@ -694,6 +701,22 @@ img { max-width: 100%; display: block; }
   background-color: var(--subtle);
   color: var(--text-3);
   border: 1px solid var(--border);
+}
+
+.badge--pending {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: #B45309;
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+.badge--progress {
+  background-color: rgba(var(--alt-rgb), 0.1);
+  color: var(--accent-alt);
+  border: 1px solid rgba(var(--alt-rgb), 0.25);
+}
+
+[data-theme="dark"] .badge--pending {
+  color: #FBBF24;
 }
 
 .featured-title {
@@ -742,6 +765,34 @@ img { max-width: 100%; display: block; }
 .featured-footer {
   display: flex;
   gap: 0.75rem;
+}
+
+.result-placeholder,
+.status-note {
+  max-width: 560px;
+  margin: -0.25rem 0 1.25rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.65;
+}
+
+.result-placeholder {
+  color: var(--text-2);
+  background-color: rgba(245, 158, 11, 0.06);
+  border: 1px dashed rgba(245, 158, 11, 0.45);
+}
+
+.status-note {
+  color: var(--text-2);
+  background-color: rgba(var(--alt-rgb), 0.05);
+  border: 1px solid rgba(var(--alt-rgb), 0.2);
+}
+
+.result-placeholder strong,
+.status-note strong {
+  color: var(--text);
 }
 
 /* Architecture diagram */
@@ -803,6 +854,40 @@ img { max-width: 100%; display: block; }
   font-size: 0.8rem;
   padding: 0.15rem 0;
   line-height: 1.4;
+}
+
+.research-summary {
+  min-width: 0;
+}
+
+.research-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.research-facts div {
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.research-facts div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.research-facts dt {
+  margin-bottom: 0.12rem;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.research-facts dd {
+  font-size: 0.82rem;
+  color: var(--text);
 }
 
 /* ============================================================
@@ -917,6 +1002,49 @@ img { max-width: 100%; display: block; }
 }
 
 .btn-card:hover { color: var(--accent); opacity: 1; }
+
+/* Compact links for early foundational projects */
+.section-foundational .section-inner {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.foundational-links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.foundational-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: border-color 0.15s, transform 0.15s;
+}
+
+.foundational-link:hover {
+  opacity: 1;
+  border-color: rgba(var(--accent-rgb), 0.4);
+  transform: translateY(-1px);
+}
+
+.foundational-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.foundational-stack {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--text-3);
+  text-align: right;
+}
 
 /* ============================================================
    RESEARCH INTERESTS
@@ -1446,7 +1574,16 @@ img { max-width: 100%; display: block; }
   .featured-title { font-size: 1.5rem; }
 
   /* ── Projects ── */
-  .projects-grid { grid-template-columns: 1fr; }
+  .projects-grid,
+  .foundational-links { grid-template-columns: 1fr; }
+
+  .foundational-link {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.2rem;
+  }
+
+  .foundational-stack { text-align: left; }
 
   /* ── Experience timeline ── */
   .timeline { padding-left: 1rem; }
