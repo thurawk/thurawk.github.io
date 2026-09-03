@@ -200,7 +200,7 @@
             \begin{highlights}
                 \item Applies LoRA-based DPO to Moondream2 (1.9B) using preference pairs automatically generated from COCO annotations, without human or API labels.
                 \item Derived and implemented the DPO objective from scratch; the full pipeline is reproducible on a 16 GB laptop.
-                \item Evaluated on POPE and CHAIR. \textbf{Results placeholder:} POPE-Adversarial F1: \_\_ $\rightarrow$ \_\_; CHAIR$_i$: \_\_ $\rightarrow$ \_\_.
+                \item \textbf{Preliminary (proof-of-concept run):} CHAIR$_i$ 0.135 $\rightarrow$ 0.124, CHAIR$_s$ 0.215 $\rightarrow$ 0.200; POPE F1 essentially unchanged across splits. Caption length and objects-per-caption stay flat---the improvement is not from ``saying less.'' Single seed, small training budget; scaling data and running multiple seeds to establish the effect.
             \end{highlights}
         \end{onecolentry}
 

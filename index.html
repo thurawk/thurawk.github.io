@@ -157,7 +157,7 @@
         <div class="featured-content">
           <div class="featured-badges">
             <span class="badge badge--org">Independent Research</span>
-            <span class="badge badge--pending">Results Pending</span>
+            <span class="badge badge--pending">Preliminary results</span>
           </div>
           <h2 class="featured-title">MoonDPO</h2>
           <p class="featured-subtitle">Memory-Efficient DPO for Hallucination Mitigation in Small VLMs</p>
@@ -171,7 +171,11 @@
             16 GB laptop.
           </p>
           <p class="result-placeholder">
-            <strong>Results placeholder:</strong> POPE-Adversarial F1: __ &rarr; __; CHAIR<sub>i</sub>: __ &rarr; __
+            <strong>Preliminary (proof-of-concept run):</strong> CHAIR<sub>i</sub> 0.135 &rarr; 0.124,
+            CHAIR<sub>s</sub> 0.215 &rarr; 0.200; POPE F1 essentially unchanged across splits.
+            Caption length and objects-per-caption stay flat &mdash; the improvement is not from
+            &ldquo;saying less.&rdquo; Single seed, small training budget; scaling data and running
+            multiple seeds to establish the effect.
           </p>
           <div class="featured-footer">
             <a href="https://github.com/thurawk/MoonDPO" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub Repository ↗</a>
