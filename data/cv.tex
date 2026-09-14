@@ -176,7 +176,7 @@
 
     \section{Profile}
     \begin{onecolentry}
-    I’m an undergraduate researcher focused on post-training small Vision-Language Models (VLMs) to improve reasoning faithfulness and reduce hallucination. My current research explores reinforcement learning and preference-based post-training, including GRPO and DPO, with an emphasis on data-, label-, and memory-efficient methods. Alongside my research, I’m completing a B.E. in Electrical Engineering at Chungnam National University and work as an AI/ML Engineer Intern at AIdanBio, where I build LLM/RAG systems, AI backends, and biomedical AI applications.
+    I’m an undergraduate researcher working on multimodal AI and small Vision-Language Models (VLMs), with a focus on reasoning faithfulness, grounding, and reliability. My work explores reinforcement learning and preference-based post-training, including GRPO and DPO, with an emphasis on data-, label-, and memory-efficient methods. I’m also interested in 3D vision, computational imaging, and scientific AI. I’m completing a B.E. in Electrical Engineering at Chungnam National University and work as an AI/ML/DL Engineer Intern at AIdanBio, building LLM/RAG systems, AI backends, and biomedical AI applications.
     \end{onecolentry}
 
     \vspace{5 pt - 0.3 cm}
@@ -184,12 +184,55 @@
     \section{Research Interests}
 
         \begin{onecolentry}
-            Vision-Language Models; Reinforcement Learning; Preference-Based Post-Training (GRPO, DPO); Hallucination Mitigation; Faithful and Grounded Multimodal Reasoning; Efficient Small VLMs.
+            Multimodal AI; Vision-Language Models; Efficient Post-Training; Grounded Reasoning; Computational Imaging; 3D Vision.
         \end{onecolentry}
 
         \vspace{-0.1 cm}
 
     \section{Research Projects}
+
+        \begin{twocolentry}{
+        }
+            \textbf{AIdanMED -- Label-Efficient VLM Post-Training for Faithful, Grounded Medical Reasoning}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Built during my internship at AIdanBio, this project trains a VLM with GRPO to produce reasoning together with a bounding box that must remain faithful to the model's own reasoning.
+                \item \textbf{Status: In progress.} SFT cold-start complete; GRPO post-training is running on 8$\times$ NVIDIA A100 GPUs. No evaluation results reported yet.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        }
+            \textbf{ChatPDB – Protein Structure Visualization Assistant (LLM + RAG + PyMOL)}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+            \item Built an assistant at AIdanBio that interprets natural language queries to visualize protein structures with LLM + RAG and PyMOL rendering.
+            \item Implemented a retriever pipeline (BM25 + FAISS + Cross-Encoder) using UniProt annotations and enabled session-based workflows.
+            \item Integrated FastAPI services and a CLI using local LLMs (Ollama) for interactive usage.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+        }
+            \textbf{PhysHolo -- Physics-Informed Holographic Phase Reconstruction}\end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Explores synthetic hologram-to-phase reconstruction by comparing classical back-propagation, a compact U-Net, and U-Net training with a physics-consistency loss through differentiable Angular Spectrum propagation.
+                \item \textbf{Status: In progress.} Current focus: simulator validation and reconstruction baselines. Evaluation targets include reconstruction accuracy, hologram consistency, noise robustness, and unseen propagation distances.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
 
         \begin{twocolentry}{
         }
@@ -199,49 +242,20 @@
         \begin{onecolentry}
             \begin{highlights}
                 \item Applies LoRA-based DPO to Moondream2 (1.9B) using preference pairs automatically generated from COCO annotations, without human or API labels.
-                \item Derived and implemented the DPO objective from scratch; the full pipeline is reproducible on a 16 GB laptop.
-                \item \textbf{Preliminary (proof-of-concept run):} CHAIR$_i$ 0.135 $\rightarrow$ 0.124, CHAIR$_s$ 0.215 $\rightarrow$ 0.200; POPE F1 essentially unchanged across splits. Caption length and objects-per-caption stay flat---the improvement is not from ``saying less.'' Single seed, small training budget; scaling data and running multiple seeds to establish the effect.
+                \item Derived and implemented the DPO objective from scratch; the full pipeline runs on a single consumer GPU (16--24 GB). Trained on 1,945 preference pairs from 5,000 images with LoRA r=32 for 3 epochs.
+                \item \textbf{Preliminary results (single seed; 500 POPE questions per split; 200 CHAIR images):} POPE F1 improves across all three splits (Popular 0.900 $\rightarrow$ 0.915), with recall approximately maintained (0.932 $\rightarrow$ 0.928); CHAIR$_i$ 0.132 $\rightarrow$ 0.031, CHAIR$_s$ 0.215 $\rightarrow$ 0.035.
+                \item The CHAIR reduction accompanies fewer objects per caption (1.86 $\rightarrow$ 1.12), indicating a caption-richness trade-off. Training/evaluation image-overlap checks, multi-seed evaluation, and a VQA regression check remain pending.
             \end{highlights}
         \end{onecolentry}
 
-        \vspace{0.2 cm}
+    \newpage
 
-        \begin{twocolentry}{
-        }
-            \textbf{AIdanMed -- Label-Efficient VLM Post-Training for Faithful, Grounded Medical Reasoning}\end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Undergraduate research at AIdanBio training a VLM with GRPO to produce reasoning together with a bounding box that must remain faithful to the model's own reasoning.
-                \item \textbf{Status: In progress.} SFT cold-start complete; GRPO post-training is running on 8$\times$A100 GPUs. No evaluation results reported yet.
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-
-        \begin{twocolentry}{
-        }
-            \textbf{ChatPDB – Protein Structure Visualization Assistant (LLM + RAG + PyMOL)}\end{twocolentry}
-
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-            \item Built an assistant that interprets natural language queries to visualize protein structures with LLM + RAG and PyMOL rendering.
-            \item Implemented a retriever pipeline (BM25 + FAISS + Cross-Encoder) using UniProt annotations and enabled session-based workflows.
-            \item Integrated FastAPI services and a CLI using local LLMs (Ollama) for interactive usage.
-            \end{highlights}
-        \end{onecolentry}
-
-    \vspace{0.2 cm}
-
-    \section{Experiences}
+    \section{Experience}
 
         \begin{twocolentry}{
             Dec 2024 – Present
         }
-            \textbf{AI/ML Engineer Intern}, \href{http://aidanbio.com/}{\textcolor{linkBlue}{AIdanBio}} -- Daejeon, KR\end{twocolentry}
+            \textbf{AI/ML/DL Engineer Intern}, \href{http://aidanbio.com/}{\textcolor{linkBlue}{AIdanBio}} -- Daejeon, KR\end{twocolentry}
 
         \vspace{0.10 cm}
         \begin{onecolentry}
@@ -276,53 +290,52 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item \textbf{Coursework:} Computer Programming (C), Computer Scientific Thinking, Linear Algebra, AI and Future Society, Modern Control Theory and Design, Sensor and Measurement Engineering, Artificial Intelligence and Data Utility
+                \item \textbf{Relevant Coursework:} Sensors and Measurement, Electromagnetics, Electronic Circuits, Linear Algebra, Computer Programming, Artificial Intelligence and Data Utility
             \end{highlights}
         \end{onecolentry}
 
-       \section{Skills}
+    \section{Skills}
+        \begin{onecolentry}
+        \textbf{ML / DL:} PyTorch, Transformers, PEFT/LoRA, NumPy, Scikit-learn.
+        \end{onecolentry}
+
+        \vspace{0.12 cm}
+
+        \begin{onecolentry}
+        \textbf{VLM / Multimodal AI:} Vision-Language Models, Visual Grounding, Hallucination Mitigation, Multimodal Reasoning.
+        \end{onecolentry}
+
+        \vspace{0.12 cm}
+
+        \begin{onecolentry}
+        \textbf{Post-Training:} SFT, GRPO, DPO, LoRA, Preference Data Generation, Knowledge Distillation.
+        \end{onecolentry}
+
+        \vspace{0.12 cm}
+
+        \begin{onecolentry}
+        \textbf{Compute / Infrastructure:} Multi-GPU Training, Linux, Git, GitHub.
+        \end{onecolentry}
+
+        \vspace{0.12 cm}
+
+        \begin{onecolentry}
+        \textbf{Applied AI Systems:} RAG, Vector Databases, FastAPI, Model Serving.
+        \end{onecolentry}
+
+        \vspace{0.12 cm}
+
         \begin{onecolentry}
         \textbf{Programming Languages:} Python, C, MATLAB.
         \end{onecolentry}
 
-        \vspace{0.2 cm}
-
-        \textbf{VLM Research \& Post-Training:}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Vision-Language Models; Hallucination Mitigation; Faithful and Grounded Multimodal Reasoning; Small VLMs
-                \item Reinforcement Learning; SFT; GRPO; DPO; LoRA; Preference Data Generation
-                \item POPE; CHAIR; LLM/VLM Evaluation; Hallucination and Faithfulness Analysis
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
+        \vspace{0.12 cm}
 
         \begin{onecolentry}
-        \textbf{Applied LLM Systems:} RAG Pipelines, LangChain Orchestration, Vector Databases, Prompt Engineering, Local LLM Deployment (Ollama), FastAPI, API Development, AI Model Integration.
+        \textbf{Engineering Simulation:} Ansys.
         \end{onecolentry}
 
-        \vspace{0.2 cm}
-
-        \textbf{Tools \& Platforms:}
-        \vspace{0.10 cm}
-        \begin{onecolentry}
-            \begin{highlights}
-                \item Development: VS Code, Cursor AI, Jupyter Notebook, PyMOL
-                \item Version Control: Git, GitHub
-                \item Productivity: Notion, Google Workspace, Microsoft Office
-                \item Model Hosting \& Inference: Ollama, Hugging Face, Transformers Inference API
-            \end{highlights}
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
-
-        \begin{onecolentry}
-        \textbf{Operating Systems:} Windows, Linux, Mac.
-        \end{onecolentry}
-
-        \vspace{0.2 cm}
+        \vspace{0.12 cm}
 
         \begin{onecolentry}
         \textbf{Languages:} Burmese (Native), English (Fluent), Korean (TOPIK 5).

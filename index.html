@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AI/ML/DL research candidate studying reinforcement learning, preference-based post-training, and hallucination mitigation in small vision-language models.">
+  <meta name="description" content="Undergraduate researcher in multimodal AI, Vision-Language Models, grounded reasoning, efficient post-training, and computational imaging.">
   <meta property="og:title" content="Thura Win Kyaw — Undergraduate Researcher in Multimodal AI">
-  <meta property="og:description" content="Vision-Language Models · GRPO · DPO · Hallucination &amp; Faithfulness">
+  <meta property="og:description" content="Multimodal AI · VLMs · Grounded Reasoning · Efficient Post-Training · Computational Imaging">
   <meta property="og:image" content="https://thurawk.github.io/data/thura_profile.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -42,7 +42,21 @@
       "@type": "CollegeOrUniversity",
       "name": "Chungnam National University"
     },
-    "knowsAbout": ["AI/ML/DL", "RAG", "Vision-Language Models", "Reinforcement Learning", "GRPO", "DPO", "VLM Hallucination", "Multimodal Faithfulness"]
+    "knowsAbout": [
+      "AI/ML/DL",
+      "RAG",
+      "Vision-Language Models",
+      "Reinforcement Learning",
+      "GRPO",
+      "DPO",
+      "VLM Hallucination",
+      "Multimodal Faithfulness",
+      "Computational Imaging",
+      "3D Vision",
+      "Scientific AI",
+      "Visual Grounding",
+      "PyTorch"
+    ]
   }
   </script>
 </head>
@@ -72,7 +86,7 @@
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="#about" class="nav-link">Home</a>
           <a href="#featured" class="nav-link">Projects</a>
-          <a href="#experience" class="nav-link">Experiences</a>
+          <a href="#experience" class="nav-link">Experience</a>
           <a href="#skills" class="nav-link">Skills</a>
           <a href="data/Thura_s_CV.pdf" target="_blank" rel="noopener noreferrer" class="nav-link nav-cv">CV ↗</a>
         </nav>
@@ -152,59 +166,18 @@
       <article class="featured-card featured-card--research reveal">
         <div class="featured-content">
           <div class="featured-badges">
-            <span class="badge badge--org">Independent Research</span>
-            <span class="badge badge--pending">Preliminary results</span>
-          </div>
-          <h2 class="featured-title">MoonDPO</h2>
-          <p class="featured-subtitle">Memory-Efficient DPO for Hallucination Mitigation in Small VLMs</p>
-          <div class="tech-tags">
-            <span>Moondream2 1.9B</span><span>DPO</span><span>LoRA</span><span>COCO</span><span>POPE</span><span>CHAIR</span>
-          </div>
-          <p class="featured-desc">
-            Applies LoRA-based DPO to Moondream2 (1.9B) using preference pairs automatically
-            generated from COCO annotations, without human or API labels. The DPO objective is
-            derived and implemented from scratch, and the full pipeline is reproducible on a
-            16 GB laptop.
-          </p>
-          <p class="result-placeholder">
-            <strong>Preliminary (proof-of-concept run):</strong> CHAIR<sub>i</sub> 0.135 &rarr; 0.124,
-            CHAIR<sub>s</sub> 0.215 &rarr; 0.200; POPE F1 essentially unchanged across splits.
-            Caption length and objects-per-caption stay flat &mdash; the improvement is not from
-            &ldquo;saying less.&rdquo; Single seed, small training budget; scaling data and running
-            multiple seeds to establish the effect.
-          </p>
-          <div class="featured-footer">
-            <a href="https://github.com/thurawk/MoonDPO" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub Repository ↗</a>
-          </div>
-        </div>
-
-        <div class="featured-diagram research-summary" aria-label="MoonDPO research setup">
-          <p class="diagram-label">Research Setup</p>
-          <dl class="research-facts">
-            <div><dt>Base model</dt><dd>Moondream2 (1.9B)</dd></div>
-            <div><dt>Adaptation</dt><dd>LoRA + DPO</dd></div>
-            <div><dt>Preference data</dt><dd>COCO-derived pairs</dd></div>
-            <div><dt>Compute</dt><dd>16 GB laptop</dd></div>
-            <div><dt>Evaluation</dt><dd>POPE + CHAIR</dd></div>
-          </dl>
-        </div>
-      </article>
-
-      <article class="featured-card featured-card--research reveal">
-        <div class="featured-content">
-          <div class="featured-badges">
-            <span class="badge badge--org">Undergraduate Research · AIdanBio</span>
+            <span class="badge badge--org">Internship Project · AIdanBio</span>
             <span class="badge badge--progress">In Progress</span>
           </div>
-          <h2 class="featured-title">AIdanMed</h2>
+          <h2 class="featured-title">AIdanMED</h2>
           <p class="featured-subtitle">Label-Efficient VLM Post-Training for Faithful, Grounded Medical Reasoning</p>
           <div class="tech-tags">
             <span>Medical VLM</span><span>GRPO</span><span>SFT</span><span>Grounded Reasoning</span><span>Bounding Boxes</span>
           </div>
           <p class="featured-desc">
-            Trains a VLM with GRPO to produce reasoning together with a bounding box that must
-            remain faithful to the model’s own reasoning, targeting label-efficient and grounded
-            medical reasoning.
+            Built during my internship at AIdanBio, this project trains a VLM with GRPO to produce
+            reasoning together with a bounding box that must remain faithful to the model’s own
+            reasoning, targeting label-efficient and grounded medical reasoning.
           </p>
           <p class="status-note">
             <strong>Status: In progress.</strong> SFT cold-start complete; GRPO post-training is
@@ -212,13 +185,14 @@
           </p>
         </div>
 
-        <div class="featured-diagram research-summary" aria-label="AIdanMed research setup">
+        <div class="featured-diagram research-summary" aria-label="AIdanMED research setup">
           <p class="diagram-label">Research Setup</p>
           <dl class="research-facts">
             <div><dt>Setting</dt><dd>Medical vision-language</dd></div>
             <div><dt>Objective</dt><dd>Faithful grounded reasoning</dd></div>
             <div><dt>Output</dt><dd>Reasoning + bounding box</dd></div>
             <div><dt>Post-training</dt><dd>SFT cold-start + GRPO</dd></div>
+            <div><dt>Compute</dt><dd>8× NVIDIA A100</dd></div>
             <div><dt>Current stage</dt><dd>GRPO training</dd></div>
           </dl>
         </div>
@@ -278,6 +252,103 @@
               <span class="node-hint">interactive output</span>
             </div>
           </div>
+        </div>
+      </article>
+
+      <article class="featured-card featured-card--research reveal">
+        <div class="featured-content">
+          <div class="featured-badges">
+            <span class="badge badge--org">Independent Research</span>
+            <span class="badge badge--progress">In Progress</span>
+          </div>
+          <h2 class="featured-title">PhysHolo</h2>
+          <p class="featured-subtitle">Physics-Informed Holographic Phase Reconstruction</p>
+          <div class="tech-tags">
+            <span>Computational Imaging</span><span>Differentiable Optics</span><span>Angular Spectrum</span><span>PyTorch</span><span>U-Net</span>
+          </div>
+          <p class="featured-desc">
+            Explores whether a differentiable optical forward model can improve lightweight
+            neural phase reconstruction from synthetic holograms. The study focuses on comparing
+            classical back-propagation, a compact U-Net, and the same U-Net trained with a
+            physics-consistency loss, with measurement noise and unseen propagation distances
+            as robustness evaluation targets.
+          </p>
+          <p class="status-note">
+            <strong>Status: In progress.</strong> Current focus: differentiable Angular Spectrum
+            propagation, simulator validation, and reconstruction baselines.
+          </p>
+        </div>
+
+        <div class="featured-diagram research-summary" aria-label="PhysHolo research setup">
+          <p class="diagram-label">Research Setup</p>
+          <dl class="research-facts">
+            <div><dt>Initial scope</dt><dd>Synthetic 2D phase reconstruction</dd></div>
+            <div><dt>Forward model</dt><dd>Angular Spectrum Method (ASM)</dd></div>
+            <div><dt>Learning</dt><dd>U-Net + physics-consistency loss</dd></div>
+            <div><dt>Evaluation</dt><dd>MAE, RMSE, PSNR, SSIM + hologram consistency</dd></div>
+            <div><dt>Robustness</dt><dd>Noise + unseen propagation distances</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="featured-card featured-card--research reveal">
+        <div class="featured-content">
+          <div class="featured-badges">
+            <span class="badge badge--org">Independent Research</span>
+            <span class="badge badge--pending">Preliminary results</span>
+          </div>
+          <h2 class="featured-title">MoonDPO</h2>
+          <p class="featured-subtitle">Memory-Efficient DPO for Hallucination Mitigation in Small VLMs</p>
+          <div class="tech-tags">
+            <span>Moondream2 1.9B</span><span>DPO</span><span>LoRA</span><span>COCO</span><span>POPE</span><span>CHAIR</span>
+          </div>
+          <p class="featured-desc">
+            Applies LoRA-based DPO to Moondream2 (1.9B) using preference pairs automatically
+            generated from COCO annotations, without human or API labels. The DPO objective is
+            derived and implemented from scratch, and the full pipeline is reproducible on a
+            single consumer GPU (16&ndash;24 GB).
+          </p>
+          <table class="results-table">
+            <caption>
+              <strong>Preliminary results &middot; Single seed</strong>
+              <span>5,000 images &rarr; 1,945 pairs &middot; LoRA r=32 &middot; 3 epochs</span>
+              <span>POPE: 500 questions/split &middot; CHAIR: 200 images</span>
+            </caption>
+            <thead>
+              <tr>
+                <th scope="col">Metric</th>
+                <th scope="col">Baseline</th>
+                <th scope="col">MoonDPO</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">POPE F1 &middot; Random &uarr;</th><td>0.919</td><td>0.921</td></tr>
+              <tr><th scope="row">POPE F1 &middot; Popular &uarr;</th><td>0.900</td><td>0.915</td></tr>
+              <tr><th scope="row">POPE F1 &middot; Adversarial &uarr;</th><td>0.866</td><td>0.871</td></tr>
+              <tr><th scope="row">POPE Recall &uarr;</th><td>0.932</td><td>0.928</td></tr>
+              <tr><th scope="row">CHAIR<sub>i</sub> &darr;</th><td>0.132</td><td>0.031</td></tr>
+              <tr><th scope="row">CHAIR<sub>s</sub> &darr;</th><td>0.215</td><td>0.035</td></tr>
+              <tr><th scope="row">Objects / caption</th><td>1.86</td><td>1.12</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="3">&uarr; Higher is better &middot; &darr; Lower is better</td></tr>
+              <tr><td colspan="3">Fewer objects per caption indicate a caption-richness trade-off. Training/evaluation image-overlap checks, multi-seed evaluation, and VQA regression remain pending.</td></tr>
+            </tfoot>
+          </table>
+          <div class="featured-footer">
+            <a href="https://github.com/thurawk/MoonDPO" target="_blank" rel="noopener noreferrer" class="btn-card">GitHub Repository ↗</a>
+          </div>
+        </div>
+
+        <div class="featured-diagram research-summary" aria-label="MoonDPO research setup">
+          <p class="diagram-label">Research Setup</p>
+          <dl class="research-facts">
+            <div><dt>Base model</dt><dd>Moondream2 (1.9B)</dd></div>
+            <div><dt>Adaptation</dt><dd>LoRA + DPO</dd></div>
+            <div><dt>Preference data</dt><dd>COCO-derived pairs</dd></div>
+            <div><dt>Compute</dt><dd>Single consumer GPU</dd></div>
+            <div><dt>Evaluation</dt><dd>POPE + CHAIR</dd></div>
+          </dl>
         </div>
       </article>
       </div>
@@ -342,6 +413,10 @@
           </div>
           <span class="edu-dates">Sept 2022 – Present</span>
         </div>
+        <p class="edu-note">
+          <strong>Relevant Coursework:</strong> Sensors and Measurement, Electromagnetics,
+          Electronic Circuits, Linear Algebra, Computer Programming, Artificial Intelligence and Data Utilization
+        </p>
       </div>
     </div>
   </section>
@@ -354,43 +429,43 @@
       <dl class="skills-table">
 
         <div class="skill-row reveal" style="--reveal-delay:0ms">
+          <dt class="skill-row-label">Deep Learning / ML</dt>
+          <dd class="skill-row-list">PyTorch, Transformers, PEFT/LoRA, NumPy, Scikit-learn</dd>
+        </div>
+
+        <div class="skill-row reveal" style="--reveal-delay:60ms">
           <dt class="skill-row-label">VLM / Multimodal AI</dt>
-          <dd class="skill-row-list">Vision-Language Models, Hallucination Mitigation, Faithful and Grounded Multimodal Reasoning, Small VLMs</dd>
+          <dd class="skill-row-list">Vision-Language Models, Visual Grounding, Hallucination Mitigation, Multimodal Reasoning</dd>
         </div>
 
         <div class="skill-row reveal" style="--reveal-delay:120ms">
           <dt class="skill-row-label">Post-Training</dt>
-          <dd class="skill-row-list">Supervised Fine-Tuning (SFT), Reinforcement Learning, GRPO, DPO, LoRA, Preference Data Generation, Knowledge Distillation</dd>
+          <dd class="skill-row-list">SFT, GRPO, DPO, LoRA, Preference Data Generation, Knowledge Distillation</dd>
+        </div>
+
+        <div class="skill-row reveal" style="--reveal-delay:180ms">
+          <dt class="skill-row-label">Compute / Infrastructure</dt>
+          <dd class="skill-row-list">Multi-GPU Training, Linux, Git, GitHub</dd>
         </div>
 
         <div class="skill-row reveal" style="--reveal-delay:240ms">
-          <dt class="skill-row-label">Applied LLM Systems</dt>
-          <dd class="skill-row-list">RAG Pipelines, LangChain Orchestration, Vector Databases, Prompt Engineering, Local LLM Deployment (Ollama)</dd>
+          <dt class="skill-row-label">Applied AI Systems</dt>
+          <dd class="skill-row-list">RAG, Vector Databases, FastAPI, Model Serving</dd>
         </div>
 
         <div class="skill-row reveal" style="--reveal-delay:300ms">
-          <dt class="skill-row-label">Backend / Systems</dt>
-          <dd class="skill-row-list">FastAPI, API Development, AI Model Integration</dd>
+          <dt class="skill-row-label">Programming Languages</dt>
+          <dd class="skill-row-list">Python, C, MATLAB</dd>
         </div>
 
         <div class="skill-row reveal" style="--reveal-delay:360ms">
-          <dt class="skill-row-label">Tools &amp; Infrastructure</dt>
-          <dd class="skill-row-list">Git, GitHub, VS Code, Claude Code</dd>
+          <dt class="skill-row-label">Engineering Simulation</dt>
+          <dd class="skill-row-list">Ansys</dd>
         </div>
 
         <div class="skill-row reveal" style="--reveal-delay:420ms">
-          <dt class="skill-row-label">Programming Languages</dt>
-          <dd class="skill-row-list">Python, C</dd>
-        </div>
-
-         <div class="skill-row reveal" style="--reveal-delay:480ms">
           <dt class="skill-row-label">Languages</dt>
           <dd class="skill-row-list">Burmese <span class="lang-level">(Native)</span>, English <span class="lang-level">(Fluent)</span>, Korean <span class="lang-level">(TOPIK 5)</span></dd>
-        </div>
-
-        <div class="skill-row reveal" style="--reveal-delay:540ms">
-          <dt class="skill-row-label">Operating Systems</dt>
-          <dd class="skill-row-list">Windows, Linux, macOS</dd>
         </div>
 
       </dl>
